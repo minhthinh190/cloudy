@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {getHourlyWeather} from '../api/provider.js';
+import {weatherIcon, weatherIconFormat} from '../api/provider.js';
 import {city} from '../api/city.js';
 import {timestampToTime} from '../utils.js';
 
@@ -17,6 +18,7 @@ class HourlyForecast extends React.Component {
         const location = city[`${this.state.location}`];
 
         getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
+            console.log(val);
             this.setState({
                 location: this.props.location,
                 weatherData: val.hourly,
@@ -29,6 +31,7 @@ class HourlyForecast extends React.Component {
             const location = city[`${this.props.location}`];
 
             getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
+                console.log(val);
                 this.setState({
                     location: this.props.location,
                     weatherData: val.hourly,
@@ -48,7 +51,11 @@ class HourlyForecast extends React.Component {
                                 <div key={element.dt} className="forecast-card">
                                     <p className="time">{timestampToTime(element.dt)}</p>
                                     <p className="max-temp">{Math.round(element.temp)} <span>°</span></p>
-                                    <p className="weather">{element.weather[0].main}</p>
+                                    <img 
+                                        className="forecast-weather-icon"
+                                        src={weatherIcon + element.weather[0].icon + weatherIconFormat}
+                                        alt="weather icon"
+                                    />
                                 </div>
                             );
                         })
