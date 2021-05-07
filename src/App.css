@@ -39,6 +39,11 @@
     color: darkgray;
 }
 
+.current-weather-icon {
+    width: 70px;
+    height: 70px;
+}
+
 .current-details {
     display: flex;
     justify-content: center;
@@ -84,6 +89,12 @@ td {
     margin: 0 10px;
     padding: 0 30px;
     text-align: center;
+}
+
+.forecast-weather-icon {
+    margin: 5px 0;
+    width: 45px;
+    height: 45px;
 }
 
 .time, .date {
