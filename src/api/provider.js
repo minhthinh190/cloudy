@@ -3,6 +3,10 @@ export const apiKey = '373a59a53a6e12d6492b8823e6963f5f';
 export const dailyWeather =  new URL("https://api.openweathermap.org/data/2.5/onecall?");
 export const currentWeather = new URL("https://api.openweathermap.org/data/2.5/onecall?");
 
+// Weather icon link
+export const weatherIcon = new URL("http://openweathermap.org/img/wn/");
+export const weatherIconFormat = "@2x.png";
+
 export async function getCurrentWeather(lat, lon) {
     const params = {
         appid: apiKey,
