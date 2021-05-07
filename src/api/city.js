@@ -13,6 +13,13 @@ export const city = {
             lat: '22.6667', lon: '106.25',
         }
     },
+    langson: {
+        id: '1576632',
+        name: 'Lạng Sơn',
+        coord: {
+            lat: '21.75', lon: '106.5',
+        }
+    },
     dienbien: {
         id: '1583477',
         name: 'Điện Biên',
@@ -62,6 +69,27 @@ export const city = {
             lat: '21.0245', lon: '105.8412',
         }
     },
+    bacninh: {
+        id: '1591449',
+        name: 'Bắc Ninh',
+        coord: {
+            lat: '21.183331', lon: '106.050003',
+        }
+    },
+    haiduong: {
+        id: '1581326',
+        name: 'Hải Dương',
+        coord: {
+            lat: '20.933331', lon: '106.316673',
+        }
+    },
+    hoabinh: {
+        id: '1580830',
+        name: 'Hòa Bình',
+        coord: {
+            lat: '20.81333', lon: '105.338333',
+        }
+    },
     namdinh: {
         id: '1573517',
         name: 'Nam Định',
@@ -81,6 +109,13 @@ export const city = {
         name: 'Nghệ An',
         coord: {
             lat: '19.3333', lon: '104.8333',
+        }
+    },
+    hatinh: {
+        id: '1581047',
+        name: 'Hà Tĩnh',
+        coord: {
+            lat: '18.33333', lon: '105.900002',
         }
     },
     quangbinh: {
@@ -104,13 +139,6 @@ export const city = {
             lat: '16.4667', lon: '107.6',
         }
     },
-    vungtau: {
-        id: '1562414',
-        name: 'Bà Rịa - Vũng Tàu',
-        coord: {
-            lat: '10.346', lon: '107.0843',
-        }
-    },
     danang: {
         id: '1905468',
         name: 'Đà Nẵng',
@@ -125,6 +153,20 @@ export const city = {
             lat: '15.1167', lon: '108.8',
         }
     },
+    kontum: {
+        id: '1578500',
+        name: 'Kon Tum',
+        coord: {
+            lat: '14.35', lon: '108.0',
+        }
+    },
+    binhdinh: {
+        id: '1568770',
+        name: 'Bình Định',
+        coord: {
+            lat: '14.16667', lon: '109.0',
+        }
+    },
     gialai: {
         id: '1581088',
         name: 'Gia Lai',
@@ -132,11 +174,25 @@ export const city = {
             lat: '13.75', lon: '108.25',
         }
     },
+    daklak: {
+        id: '1584169',
+        name: 'Đắk Lắk',
+        coord: {
+            lat: '12.83333', lon: '108.166672',
+        }
+    },
     lamdong: {
         id: '1577882',
         name: 'Lâm Đồng',
         coord: {
             lat: '11.5', lon: '108.3333',
+        }
+    },
+    phuyen: {
+        id: '1569805',
+        name: 'Phú Yên',
+        coord: {
+            lat: '13.16667', lon: '109.166672',
         }
     },
     khanhhoa: {
@@ -153,11 +209,39 @@ export const city = {
             lat: '11.1667', lon: '106.6667',
         }
     },
+    binhthuan: {
+        id: '1581882',
+        name: 'Bình Thuận',
+        coord: {
+            lat: '11.08333', lon: '108.0',
+        }
+    },
     tphcm: {
         id: '1580578',
         name: 'TP Hồ Chí Minh',
         coord: {
             lat: '10.8333', lon: '106.6667',
+        }
+    },
+    vungtau: {
+        id: '1562414',
+        name: 'Bà Rịa - Vũng Tàu',
+        coord: {
+            lat: '10.346', lon: '107.0843',
+        }
+    },
+    bentre: {
+        id: '1587974',
+        name: 'Bến Tre',
+        coord: {
+            lat: '10.16667', lon: '106.5',
+        }
+    },
+    angiang: {
+        id: '1594446',
+        name: 'An Giang',
+        coord: {
+            lat: '10.5', lon: '105.166672',
         }
     },
     cantho: {
@@ -180,26 +264,38 @@ export const cities = [
     {value: 'hanoi', title: 'Hà Nội'},
     {value: 'hagiang', title: 'Hà Giang'},
     {value: 'caobang', title: 'Cao Bằng'},
+    {value: 'langson', title: 'Lạng Sơn'},
     {value: 'yenbai', title: 'Yên Bái'},
     {value: 'dienbien', title: 'Điện Biên'},
     {value: 'sonla', title: 'Sơn La'},
     {value: 'haiphong', title: 'Hải Phòng'},
     {value: 'quangninh', title: 'Quảng Ninh'},
     {value: 'bacgiang', title: 'Bắc Giang'},
+    {value: 'bacninh', title: 'Bắc Ninh'},
+    {value: 'haiduong', title: 'Hải Dương'},
+    {value: 'hoabinh', title: 'Hòa Bình'},
     {value: 'namdinh', title: 'Nam Định'},
     {value: 'thanhhoa', title: 'Thanh Hóa'},
     {value: 'nghean', title: 'Nghệ An'},
+    {value: 'hatinh', title: 'Hà Tĩnh'},
     {value: 'quangbinh', title: 'Quảng Bình'},
     {value: 'quangtri', title: 'Quảng Trị'},
     {value: 'hue', title: 'Thừa Thiên - Huế'},
     {value: 'danang', title: 'Đà Nẵng'},
     {value: 'quangngai', title: 'Quảng Ngãi'},
+    {value: 'kontum', title: 'Kon Tum'},
+    {value: 'binhdinh', title: 'Bình Định'},
     {value: 'gialai', title: 'Gia Lai'},
+    {value: 'daklak', title: 'Đắk Lắk'},
     {value: 'lamdong', title: 'Lâm Đồng'},
+    {value: 'phuyen', title: 'Phú Yên'},
     {value: 'khanhhoa', title: 'Khánh Hòa'},
     {value: 'binhduong', title: 'Bình Dương'},
+    {value: 'binhthuan', title: 'Bình Thuận'},
     {value: 'tphcm', title: 'TP Hồ Chí Minh'},
     {value: 'vungtau', title: 'Bà Rịa - Vũng Tàu'},
+    {value: 'bentre', title: 'Bến Tre'},
+    {value: 'angiang', title: 'An Giang'},
     {value: 'cantho', title: 'Cần Thơ'},
     {value: 'camau', title: 'Cà Mau'},
 ];
