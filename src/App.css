@@ -1,38 +1,116 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+    position: fixed;
+    left: 5px;
+    top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.current-container {
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.current-main {
+    padding: 40px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.current-details {
+    width: fit-content;
+    margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.current-location {
+    font-size: 24px;
+    margin: 0;
+}
+
+.current-temp {
+    margin: 10px 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.current-weather {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.current-details {
+    display: flex;
+    justify-content: center;
+}
+
+.table-details {
+    width: 300px;
+    margin: 0 20px;
+    border-collapse: collapse;
+}
+
+.detail-val {
+    text-align: right;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid gainsboro;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.forecast-container {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.section-title {
+    margin: 0 0 20px 0;
+}
+
+.forecast-card-container {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.forecast-card {
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+    width: 50px;
+    margin: 0 10px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.time, .date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.max-temp {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: lightsalmon;
+}
+
+.min-temp {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: royalblue;
+}
+
+span {
+    font-weight: normal;
+}
+
+.weather {
+    font-weight: bold;
+    color: darkgrey;
 }
