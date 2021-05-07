@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {getCurrentWeather} from '../api/provider.js';
+import {weatherIcon, weatherIconFormat} from '../api/provider.js';
 import {city} from '../api/city.js';
 import {timestampToTime} from '../utils.js';
 
@@ -11,6 +12,7 @@ class CurrentWeather extends React.Component {
             location: this.props.location,
             temp: '',
             weather: '',
+            weather_icon: '',
             feels_like: '',
             clouds: '',
             humidity: '',
@@ -26,11 +28,11 @@ class CurrentWeather extends React.Component {
         const location = city[`${this.state.location}`];
         
         getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
-            console.log(val);
             this.setState({
                 location: location.name,
                 temp: val.current.temp,
                 weather: val.current.weather[0].main,
+                weather_icon: val.current.weather[0].icon,
                 feels_like: val.current.feels_like,
                 clouds: val.current.clouds,
                 humidity: val.current.humidity,
@@ -52,11 +54,11 @@ class CurrentWeather extends React.Component {
             const location = city[`${this.props.location}`];
 
             getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
-                console.log(val);
                 this.setState({
                     location: location.name,
                     temp: val.current.temp,
                     weather: val.current.weather[0].main,
+                    weather_icon: val.current.weather[0].icon,
                     feels_like: val.current.feels_like,
                     clouds: val.current.clouds,
                     humidity: val.current.humidity,
@@ -76,7 +78,11 @@ class CurrentWeather extends React.Component {
                 <div className="current-main">
                     <p className="current-location">{this.state.location}</p>
                     <p className="current-temp">{Math.round(this.state.temp)} °C</p>
-                    <p className="current-weather">{this.state.weather}</p>
+                    <img 
+                        className="current-weather-icon"
+                        src={weatherIcon + this.state.weather_icon + weatherIconFormat} 
+                        alt="weather icon"
+                    />
                 </div>
                 <div className="current-details">
                     <table className="table-details">
