@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cloudy/static/css/main.2fc1fb41.chunk.css",
-    "main.js": "/cloudy/static/js/main.7175473f.chunk.js",
-    "main.js.map": "/cloudy/static/js/main.7175473f.chunk.js.map",
+    "main.css": "/cloudy/static/css/main.705311e6.chunk.css",
+    "main.js": "/cloudy/static/js/main.4fb7b9c2.chunk.js",
+    "main.js.map": "/cloudy/static/js/main.4fb7b9c2.chunk.js.map",
     "runtime-main.js": "/cloudy/static/js/runtime-main.38fd0c4b.js",
     "runtime-main.js.map": "/cloudy/static/js/runtime-main.38fd0c4b.js.map",
     "static/js/2.25f2d9df.chunk.js": "/cloudy/static/js/2.25f2d9df.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.3cb16a3d.chunk.js": "/cloudy/static/js/3.3cb16a3d.chunk.js",
     "static/js/3.3cb16a3d.chunk.js.map": "/cloudy/static/js/3.3cb16a3d.chunk.js.map",
     "index.html": "/cloudy/index.html",
-    "static/css/main.2fc1fb41.chunk.css.map": "/cloudy/static/css/main.2fc1fb41.chunk.css.map",
+    "static/css/main.705311e6.chunk.css.map": "/cloudy/static/css/main.705311e6.chunk.css.map",
     "static/js/2.25f2d9df.chunk.js.LICENSE.txt": "/cloudy/static/js/2.25f2d9df.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.38fd0c4b.js",
     "static/js/2.25f2d9df.chunk.js",
-    "static/css/main.2fc1fb41.chunk.css",
-    "static/js/main.7175473f.chunk.js"
+    "static/css/main.705311e6.chunk.css",
+    "static/js/main.4fb7b9c2.chunk.js"
   ]
 }
