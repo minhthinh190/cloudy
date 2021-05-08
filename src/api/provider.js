@@ -4,7 +4,7 @@ export const dailyWeather =  new URL("https://api.openweathermap.org/data/2.5/on
 export const currentWeather = new URL("https://api.openweathermap.org/data/2.5/onecall?");
 
 // Weather icon link
-export const weatherIcon = new URL("http://openweathermap.org/img/wn/");
+export const weatherIcon = new URL("https://openweathermap.org/img/wn/");
 export const weatherIconFormat = "@2x.png";
 
 export async function getCurrentWeather(lat, lon) {
