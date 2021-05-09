@@ -28,7 +28,6 @@ class CurrentWeather extends React.Component {
       const location = province[`${this.state.location}`];
 
       getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
-         console.log(val);
          this.setState({
                location: this.props.location,
                temp: val.current.temp,
@@ -56,7 +55,6 @@ class CurrentWeather extends React.Component {
          console.log('update location: ' + location.name);
 
          getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
-            console.log(val);
             this.setState({
                   location: this.props.location,
                   temp: val.current.temp,
