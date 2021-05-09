@@ -10,6 +10,10 @@ You can view the live demo of the application [here](https://minhthinh190.github
    <img src="public/screenshot.png">
 </div>
 
+<p align="center">
+   *App screenshot*
+</p>
+
 ## Features
 
 - Local current weather
