@@ -31,6 +31,9 @@
 
 .letter {
    margin: 0;
+   user-select: none;
+	-webkit-user-select: none;
+  	-moz-user-select: none;
 }
 
 .letter-c { color: #2058dc; }
