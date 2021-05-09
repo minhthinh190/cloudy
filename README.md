@@ -6,8 +6,6 @@ Cloudy is a weather forecast application for Vietnam's territory.
 
 You can view the live demo of the application [here](https://minhthinh190.github.io/cloudy/).
 
-<br/>
-
 <div>
    <img src="public/screenshot.png">
 </div>
