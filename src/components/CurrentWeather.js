@@ -3,8 +3,7 @@ import React from 'react';
 import {getCurrentWeather} from '../api/provider.js';
 import {weatherIcon, weatherIconFormat} from '../api/provider.js';
 import {province} from '../api/location.js';
-import {timestampToTime} from '../utils.js';
-import {toVietnamese} from '../translation.js';
+import {timestampToTime, toVietnamese} from '../utils.js';
 
 class CurrentWeather extends React.Component {
    constructor(props) {
