@@ -113,7 +113,7 @@ export const travelLocationList = [
                location: [
                   { value: 'Sa Pa', title: 'Sa Pa', inside: 'Lào Cai' },
                   { value: 'Ô Quy Hồ', title: 'Ô Quy Hồ', inside: 'Lai Châu' },
-                  { value: 'Fanxipang', title: 'Fanxipang', inside: 'Lào Cai' },
+                  { value: 'Fanxipan', title: 'Fanxipan', inside: 'Lào Cai' },
                   { value: 'Mù Cang Chải', title: 'Mù Cang Chải', inside: 'Yên Bái' },
                   { value: 'Tà Xùa', title: 'Tà Xùa', inside: 'Sơn La' },
                   { value: 'Mai Châu', title: 'Mai Châu', inside: 'Hòa Bình' },
@@ -348,8 +348,8 @@ export const province = {
    'Ô Quy Hồ': {
       name: 'Ô Quy Hồ', inside: 'Lai Châu', coord: { lon: '103.763333', lat: '22.353889' },
    },
-   'Fanxipang': {
-      name: 'Fanxipang', inside: 'Lào Cai', coord: { lon: '103.775', lat: '22.303333' },
+   'Fanxipan': {
+      name: 'Fanxipan', inside: 'Lào Cai', coord: { lon: '103.775', lat: '22.303333' },
    },
    'Mù Cang Chải': {
       name: 'Mù Cang Chải', inside: 'Yên Bái', coord: { lon: '104.089222', lat: '21.850915' },
