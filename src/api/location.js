@@ -115,6 +115,7 @@ export const travelLocationList = [
                   { value: 'Ô Quy Hồ', title: 'Ô Quy Hồ', inside: 'Lai Châu' },
                   { value: 'Phanxipang', title: 'Phanxipang', inside: 'Lào Cai' },
                   { value: 'Mù Cang Chải', title: 'Mù Cang Chải', inside: 'Yên Bái' },
+                  { value: 'Tà Xùa', title: 'Tà Xùa', inside: 'Sơn La' },
                   { value: 'Mai Châu', title: 'Mai Châu', inside: 'Hòa Bình' },
                ],
          },
@@ -124,6 +125,7 @@ export const travelLocationList = [
                   { value: 'Mã Pí Lèng', title: 'Mã Pí Lèng', inside: 'Hà Giang' },
                   { value: 'Bản Giốc', title: 'Bản Giốc', inside: 'Cao Bằng' },
                   { value: 'Hồ Ba Bể', title: 'Hồ Ba Bể', inside: 'Bắc Kạn' },
+                  { value: 'Yên Tử', title: 'Yên Tử', inside: 'Quảng Ninh' },
                   { value: 'Hạ Long', title: 'Hạ Long', inside: 'Quảng Ninh' },
                   { value: 'Cô Tô', title: 'Cô Tô', inside: 'Quảng Ninh' },
                ],
@@ -148,6 +150,7 @@ export const travelLocationList = [
                name: 'Duyên hải Nam Trung Bộ',
                location: [
                   { value: 'Bà Nà', title: 'Bà Nà', inside: 'Đà Nẵng' },
+                  { value: 'Mỹ Sơn', title: 'Mỹ Sơn', inside: 'Quảng Nam' },
                   { value: 'Hội An', title: 'Hội An', inside: 'Quảng Nam' },
                   { value: 'Nha Trang', title: 'Nha Trang', inside: 'Khánh Hòa' },
                   { value: 'Lý Sơn', title: 'Lý Sơn', inside: 'Quảng Ngãi' },
@@ -160,6 +163,7 @@ export const travelLocationList = [
                location: [
                   { value: 'Biển Hồ', title: 'Biển Hồ', inside: 'Gia Lai' },
                   { value: 'Đà Lạt', title: 'Đà Lạt', inside: 'Lâm Đồng' },
+                  { value: 'Tà Năng', title: 'Tà Năng', inside: 'Lâm Đồng' },
                ],
          },
       ],
@@ -181,6 +185,7 @@ export const travelLocationList = [
                   { value: 'Đồng Sen Tháp Mười', title: 'Đồng Sen Tháp Mười', inside: 'Đồng Tháp' },
                   { value: 'Cái Bè', title: 'Cái Bè', inside: 'Tiền Giang' },
                   { value: 'Thất Sơn', title: 'Thất Sơn', inside: 'An Giang' },
+                  { value: 'Hòn Đá Bạc', title: 'Hòn Đá Bạc', inside: 'Cà Mau' },
                   { value: 'Phú Quốc', title: 'Phú Quốc', inside: 'Kiên Giang' },
                ],
          },
@@ -189,6 +194,7 @@ export const travelLocationList = [
 ];
 
 export const province = {
+   // TỈNH / THÀNH PHỐ
    // BẮC BỘ
    // Đồng bằng sông Hồng
    'Hà Nội': {
@@ -348,6 +354,9 @@ export const province = {
    'Mù Cang Chải': {
       name: 'Mù Cang Chải', inside: 'Yên Bái', coord: { lon: '104.089222', lat: '21.850915' },
    },
+   'Tà Xùa': {
+      name: 'Tà Xùa', inside: 'Sơn La', coord: { lon: '104.490278', lat: '21.326944' },
+   },
    'Mai Châu': {
       name: 'Mai Châu', inside: 'Hòa Bình', coord: { lon: '105.005278', lat: '20.671667' },
    },
@@ -360,6 +369,9 @@ export const province = {
    },
    'Hồ Ba Bể': {
       name: 'Hồ Ba Bể', inside: 'Bắc Kạn', coord: { lon: '105.616667', lat: '22.416667' },
+   },
+   'Yên Tử': {
+      name: 'Yên Tử', inside: 'Quảng Ninh', coord: { lon: '106.716667', lat: '21.083333' },
    },
    'Hạ Long': {
       name: 'Hạ Long', inside: 'Quảng Ninh', coord: { lon: '107.089722', lat: '20.873333' },
@@ -392,132 +404,8 @@ export const province = {
    'Bà Nà': {
       name: 'Bà Nà', inside: 'Đà Nẵng', coord: { lon: '107.9942', lat: '15.9957' },
    },
-   'Hội An': {
-      name: 'Hội An', inside: 'Quảng Nam', coord: { lon: '108.320556', lat: '15.880833' },
-   },
-   'Nha Trang': {
-      name: 'Nha Trang', inside: 'Khánh Hòa', coord: { lon: '109.196389', lat: '12.256111' },
-   },
-   'Lý Sơn': {
-      name: 'Lý Sơn', inside: 'Quảng Ngãi', coord: { lon: '109.1175', lat: '15.380833' },
-   },
-   'Bãi Xép': {
-      name: 'Bãi Xép', inside: 'Phú Yên', coord: { lon: '109.255278', lat: '13.291111' },
-   },
-   'Mũi Né': {
-      name: 'Mũi Né', inside: 'Bình Thuận', coord: { lon: '108.283333', lat: '10.933333' },
-   },
-   // Tây Nguyên
-   'Biển Hồ': {
-      name: 'Biển Hồ', inside: 'Gia Lai', coord: { lon: '108.014444', lat: '14.059444' },
-   },
-   'Đà Lạt': {
-      name: 'Đà Lạt', inside: 'Lâm Đồng', coord: { lon: '108.436866', lat: '11.940381' },
-   },
-
-   // NAM BỘ
-   // Đông Nam Bộ
-   'Núi Bà Đen': {
-      name: 'Núi Bà Đen', inside: 'Tây Ninh', coord: { lon: '106.166667', lat: '11.366667' },
-   },
-   'Giang Điền': {
-      name: 'Giang Điền', inside: 'Đồng Nai', coord: { lon: '106.983357', lat: '10.921673' },
-   },
-   'Vũng Tàu': {
-      name: 'Vũng Tàu', inside: 'Bà Rịa - Vũng Tàu', coord: { lon: '107.095251', lat: '10.343569' },
-   },
-   // Đồng bằng sông Cửu Long
-   'Đồng Sen Tháp Mười': {
-      name: 'Đồng Sen Tháp Mười', inside: 'Đồng Tháp', coord: { lon: '105.848651', lat: '10.520498' },
-   },
-   'Cái Bè': {
-      name: 'Cái Bè', inside: 'Tiền Giang', coord: { lon: '105.933611', lat: '10.405833' },
-   },
-   'Thất Sơn': {
-      name: 'Thất Sơn', inside: 'An Giang', coord: { lon: '104.973056', lat: '10.540833' },
-   },
-   'Phú Quốc': {
-      name: 'Phú Quốc', inside: 'Kiên Giang', coord: { lon: '104.010467', lat: '10.287154' },
-   },
-};
-
-export const travelLocation = {
-   // BẮC BỘ
-   // Đồng bằng sông Hồng
-   'Đại Lải': {
-      name: 'Đại Lải', inside: 'Vĩnh Phúc', coord: { lon: '105.714722', lat: '21.325' },
-   },
-   'Tam Đảo': {
-      name: 'Tam Đảo', inside: 'Vĩnh Phúc', coord: { lon: '105.616667', lat: '21.393611' },
-   },
-   'Cát Bà': {
-      name: 'Cát Bà', inside: 'Hải Phòng', coord: { lon: '107.057778', lat: '20.723889' },
-   },
-   'Đồ Sơn': {
-      name: 'Đồ Sơn', inside: 'Hải Phòng', coord: { lon: '106.789444', lat: '20.713611' },
-   },
-   'Tràng An': {
-      name: 'Tràng An', inside: 'Ninh Bình', coord: { lon: '105.896389', lat: '20.256667' },
-   },
-   'Hoa Lư': {
-      name: 'Hoa Lư', inside: 'Ninh Bình', coord: { lon: '105.916944', lat: '20.25' },
-   },
-   // Tây Bắc Bộ
-   'Sa Pa': {
-      name: 'Sa Pa', inside: 'Lào Cai', coord: { lon: '103.841944', lat: '22.335556' },
-   },
-   'Ô Quy Hồ': {
-      name: 'Ô Quy Hồ', inside: 'Lai Châu', coord: { lon: '103.763333', lat: '22.353889' },
-   },
-   'Phanxipang': {
-      name: 'Phanxipang', inside: 'Lào Cai', coord: { lon: '103.775', lat: '22.303333' },
-   },
-   'Mù Cang Chải': {
-      name: 'Mù Cang Chải', inside: 'Yên Bái', coord: { lon: '104.089222', lat: '21.850915' },
-   },
-   'Mai Châu': {
-      name: 'Mai Châu', inside: 'Hòa Bình', coord: { lon: '105.005278', lat: '20.671667' },
-   },
-   // Đông Bắc Bộ
-   'Mã Pí Lèng': {
-      name: 'Mã Pí Lèng', inside: 'Hà Giang', coord: { lon: '105.410942', lat: '23.240808' },
-   },
-   'Bản Giốc': {
-      name: 'Bản Giốc', inside: 'Cao Bằng', coord: { lon: '106.722501', lat: '22.855897' },
-   },
-   'Hồ Ba Bể': {
-      name: 'Hồ Ba Bể', inside: 'Bắc Kạn', coord: { lon: '105.616667', lat: '22.416667' },
-   },
-   'Hạ Long': {
-      name: 'Hạ Long', inside: 'Quảng Ninh', coord: { lon: '107.089722', lat: '20.873333' },
-   },
-   'Cô Tô': {
-      name: 'Cô Tô', inside: 'Quảng Ninh', coord: { lon: '107.698056', lat: '20.947222' },
-   },
-
-   // TRUNG BỘ
-   // Bắc Trung Bộ
-   'Sầm Sơn': {
-      name: 'Sầm Sơn', inside: 'Thanh Hóa', coord: { lon: '105.887778', lat: '19.707778' },
-   },
-   'Cửa Lò': {
-      name: 'Cửa Lò', inside: 'Nghệ An', coord: { lon: '105.73', lat: '18.72' },
-   },
-   'Bãi Lữ': {
-      name: 'Bãi Lữ', inside: 'Nghệ An', coord: { lon: '105.6', lat: '18.8' },
-   },
-   'Phong Nha - Kẻ Bàng': {
-      name: 'Phong Nha - Kẻ Bàng', inside: 'Quảng Bình', coord: { lon: '106.15125', lat: '17.537222' },
-   },
-   'Sơn Đoòng': {
-      name: 'Sơn Đoòng', inside: 'Quảng Bình', coord: { lon: '106.2875', lat: '17.456944' },
-   },
-   'Lăng Cô': {
-      name: 'Lăng Cô', inside: 'Thừa Thiên - Huế', coord: { lon: '108.0836', lat: '16.23' },
-   },
-   // Duyên hải Nam Trung Bộ
-   'Bà Nà': {
-      name: 'Bà Nà', inside: 'Đà Nẵng', coord: { lon: '107.9942', lat: '15.9957' },
+   'Mỹ Sơn': {
+      name: 'Mỹ Sơn', inside: 'Quảng Nam', coord: { lon: '108.116667', lat: '15.766667' },
    },
    'Hội An': {
       name: 'Hội An', inside: 'Quảng Nam', coord: { lon: '108.320556', lat: '15.880833' },
@@ -541,6 +429,9 @@ export const travelLocation = {
    'Đà Lạt': {
       name: 'Đà Lạt', inside: 'Lâm Đồng', coord: { lon: '108.436866', lat: '11.940381' },
    },
+   'Tà Năng': {
+      name: 'Tà Năng', inside: 'Lâm Đồng', coord: { lon: '108.444018', lat: '11.567233' },
+   },
 
    // NAM BỘ
    // Đông Nam Bộ
@@ -562,6 +453,9 @@ export const travelLocation = {
    },
    'Thất Sơn': {
       name: 'Thất Sơn', inside: 'An Giang', coord: { lon: '104.973056', lat: '10.540833' },
+   },
+   'Hòn Đá Bạc': {
+      name: 'Hòn Đá Bạc', inside: 'Cà Mau', coord: { lon: '104.800278', lat: '9.179166' },
    },
    'Phú Quốc': {
       name: 'Phú Quốc', inside: 'Kiên Giang', coord: { lon: '104.010467', lat: '10.287154' },
