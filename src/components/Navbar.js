@@ -15,6 +15,14 @@ function Navbar(props) {
                   <TravelLocationList onLocationChange={props.onOptionChange}/>
                </a>
             </div>
+            <div className="appname">
+               <p class="letter letter-c">C</p>
+               <p class="letter letter-l">l</p>
+               <p class="letter letter-o">o</p>
+               <p class="letter letter-u">u</p>
+               <p class="letter letter-d">d</p>
+               <p class="letter letter-y">y</p>
+            </div>
       </div>
    );
 }

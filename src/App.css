@@ -7,11 +7,38 @@
 
 /* Navbar */
 .navbar {
+   display: flex;
+   align-items: center;
+   position: relative;
    background-color: white;
    margin-bottom: 50px;
    padding: 20px 50px;
    box-shadow: 0 1.5px 3px lightgray;
 }
+
+.appname {
+   width: fit-content;
+	display: flex;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto;
+	background-color: white;
+   padding: 0px 20px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.letter {
+   margin: 0;
+}
+
+.letter-c { color: #2058dc; }
+.letter-l { color: #4269e2; }
+.letter-o { color: #5a82ea; }
+.letter-u { color: #fddb5b; }
+.letter-d { color: #fab935; }
+.letter-y { color: orange; }
 
 .dropdown {
    background-color: white;
@@ -86,7 +113,7 @@
 /* */
 
 .current-container {
-   width: 650px;
+   width: 700px;
    margin: 0 auto;
    text-align: center;
    background-color: white;
@@ -129,7 +156,7 @@
 }
 
 .table-details {
-   width: 250px;
+   width: 280px;
    border-collapse: collapse;
    margin: 10px 20px 0 20px;
 }
@@ -146,7 +173,7 @@ td {
 }
 
 .forecast-container {
-   width: 650px;
+   width: 700px;
    margin: 50px auto;
    padding: 0;
 }
@@ -164,7 +191,7 @@ td {
 
 .forecast-card {
    border-radius: 15px;
-   width: 50px;
+   width: 60px;
    margin: 0 10px;
    padding: 0 30px;
    text-align: center;
@@ -173,9 +200,28 @@ td {
 }
 
 .forecast-weather-icon {
-   margin: 5px 0;
-   width: 45px;
-   height: 45px;
+   margin: 5px 0 0 0;
+   width: 55px;
+   height: 55px;
+}
+
+.forecast-uv-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 8px;
+}
+
+.forecast-uv-icon {
+   width: 28px;
+   height: 28px;
+   margin-right: 5px;
+}
+
+.forecast-uv-index {
+   font-size: 12px;
+   font-weight: bold;
+   color: #323232;
 }
 
 .time, .date {
