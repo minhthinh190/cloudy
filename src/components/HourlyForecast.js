@@ -5,6 +5,8 @@ import {weatherIcon, weatherIconFormat} from '../api/provider.js';
 import {province} from '../api/location.js';
 import {timestampToTime} from '../utils.js';
 
+import uv_icon from '../uv_icon.png';
+
 class HourlyForecast extends React.Component {
    constructor(props) {
       super(props);
@@ -30,10 +32,11 @@ class HourlyForecast extends React.Component {
          const location = province[`${this.props.location}`];
 
          getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
-               this.setState({
-                  location: this.props.location,
-                  weatherData: val.hourly,
-               });
+            console.log(val);
+            this.setState({
+               location: this.props.location,
+               weatherData: val.hourly,
+            });
          });
       }
    }
@@ -54,6 +57,10 @@ class HourlyForecast extends React.Component {
                                        src={weatherIcon + element.weather[0].icon + weatherIconFormat}
                                        alt="weather icon"
                                  />
+                                 <div className="forecast-uv-container">
+                                    <img className="forecast-uv-icon" src={uv_icon} alt="uv icon"/>
+                                    <p className="forecast-uv-index">{element.uvi}</p>
+                                 </div>
                               </div>
                            );
                      })
