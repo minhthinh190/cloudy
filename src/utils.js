@@ -29,50 +29,50 @@ export function toVietnamese(description) {
          translation = 'Ít mây';
          break;
       case 'scattered clouds':
-         translation = 'mây rải rác';
+         translation = 'Mây rải rác';
          break;
       case 'broken clouds':
-         translation = 'nhiều mây';
+         translation = 'Nhiều mây';
          break;
       case 'overcast clouds':
-         translation = 'nhiều mây';
+         translation = 'Nhiều mây';
          break;
       
       // Rain weather
       case 'light rain':
-         translation = 'mưa nhẹ';
+         translation = 'Mưa nhẹ';
          break;
       case 'moderate rain':
-         translation = 'mưa vừa';
+         translation = 'Mưa vừa';
          break;
       case 'heavy intensity rain':
-         translation = 'mưa to';
+         translation = 'Mưa to';
          break;
       case 'very heavy rain':
-         translation = 'mưa rất to';
+         translation = 'Mưa rất to';
          break;
       case 'extreme rain':
-         translation = 'mưa rất to';
+         translation = 'Mưa rất to';
          break;
-      case 'mưa lạnh':
-         translation = '';
+      case 'freezing rain':
+         translation = 'Mưa lạnh';
          break;
       case 'light intensity shower rain':
-         translation = 'mưa rào nhẹ';
+         translation = 'Mưa rào nhẹ';
          break;
       case 'shower rain':
-         translation = 'mưa rào';
+         translation = 'Mưa rào';
          break;
       case 'heavy intensity shower rain':
-         translation = 'mưa to';
+         translation = 'Mưa to';
          break;
       case 'ragged shower rain':
-         translation = 'mưa rất to';
+         translation = 'Mưa rất to';
          break;
 
       // Clear weather
       case 'clear sky':
-         translation = 'quang mây';
+         translation = 'Quang mây';
          break;
 
       default: 
