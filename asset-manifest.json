@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cloudy/static/css/main.477868cc.chunk.css",
+    "main.css": "/cloudy/static/css/main.b4aac597.chunk.css",
     "main.js": "/cloudy/static/js/main.7f55e516.chunk.js",
     "main.js.map": "/cloudy/static/js/main.7f55e516.chunk.js.map",
     "runtime-main.js": "/cloudy/static/js/runtime-main.38fd0c4b.js",
@@ -10,14 +10,14 @@
     "static/js/3.3cb16a3d.chunk.js": "/cloudy/static/js/3.3cb16a3d.chunk.js",
     "static/js/3.3cb16a3d.chunk.js.map": "/cloudy/static/js/3.3cb16a3d.chunk.js.map",
     "index.html": "/cloudy/index.html",
-    "static/css/main.477868cc.chunk.css.map": "/cloudy/static/css/main.477868cc.chunk.css.map",
+    "static/css/main.b4aac597.chunk.css.map": "/cloudy/static/css/main.b4aac597.chunk.css.map",
     "static/js/2.103efb33.chunk.js.LICENSE.txt": "/cloudy/static/js/2.103efb33.chunk.js.LICENSE.txt",
     "static/media/uv_icon.65f61773.png": "/cloudy/static/media/uv_icon.65f61773.png"
   },
   "entrypoints": [
     "static/js/runtime-main.38fd0c4b.js",
     "static/js/2.103efb33.chunk.js",
-    "static/css/main.477868cc.chunk.css",
+    "static/css/main.b4aac597.chunk.css",
     "static/js/main.7f55e516.chunk.js"
   ]
 }
