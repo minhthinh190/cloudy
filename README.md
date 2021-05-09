@@ -10,9 +10,9 @@ You can view the live demo of the application [here](https://minhthinh190.github
    <img src="public/screenshot.png">
 </div>
 
-<p align="center">
+<div align="center">
    *App screenshot*
-</p>
+</div>
 
 ## Features
 
