@@ -16,12 +16,12 @@ function Navbar(props) {
                </a>
             </div>
             <div className="appname">
-               <p class="letter letter-c">C</p>
-               <p class="letter letter-l">l</p>
-               <p class="letter letter-o">o</p>
-               <p class="letter letter-u">u</p>
-               <p class="letter letter-d">d</p>
-               <p class="letter letter-y">y</p>
+               <p className="letter letter-c">C</p>
+               <p className="letter letter-l">l</p>
+               <p className="letter letter-o">o</p>
+               <p className="letter letter-u">u</p>
+               <p className="letter letter-d">d</p>
+               <p className="letter letter-y">y</p>
             </div>
       </div>
    );
