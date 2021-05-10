@@ -1,40 +1,40 @@
-export const areaList = [
+export const AREA = [
    {
       name: 'Bắc Bộ',
       sub_area: [
          {
-               name: 'Đồng bằng sông Hồng',
-               location: [
-                  { value: 'Hà Nội', title: 'Hà Nội' },
-                  { value: 'Bắc Ninh', title: 'Bắc Ninh' },
-                  { value: 'Hà Nam', title: 'Hà Nam' },
-                  { value: 'Hải Dương', title: 'Hải Dương' },
-                  { value: 'Hải Phòng', title: 'Hải Phòng' },
-                  { value: 'Thái Bình', title: 'Thái Bình' },
-                  { value: 'Nam Định', title: 'Nam Định' },
-               ],
+            name: 'Đồng bằng sông Hồng',
+            location: [
+               { value: 'Hà Nội', title: 'Hà Nội' },
+               { value: 'Bắc Ninh', title: 'Bắc Ninh' },
+               { value: 'Hà Nam', title: 'Hà Nam' },
+               { value: 'Hải Dương', title: 'Hải Dương' },
+               { value: 'Hải Phòng', title: 'Hải Phòng' },
+               { value: 'Thái Bình', title: 'Thái Bình' },
+               { value: 'Nam Định', title: 'Nam Định' },
+            ],
          },
          {
-               name: 'Tây Bắc Bộ',
-               location: [
-                  { value: 'Lai Châu', title: 'Lai Châu' },
-                  { value: 'Lào Cai', title: 'Lào Cai' },
-                  { value: 'Điện Biên', title: 'Điện Biên' },
-                  { value: 'Yên Bái', title: 'Yên Bái' },
-                  { value: 'Sơn La', title: 'Sơn La' },
-                  { value: 'Hòa Bình', title: 'Hòa Bình' },
-               ],
+            name: 'Tây Bắc Bộ',
+            location: [
+               { value: 'Lai Châu', title: 'Lai Châu' },
+               { value: 'Lào Cai', title: 'Lào Cai' },
+               { value: 'Điện Biên', title: 'Điện Biên' },
+               { value: 'Yên Bái', title: 'Yên Bái' },
+               { value: 'Sơn La', title: 'Sơn La' },
+               { value: 'Hòa Bình', title: 'Hòa Bình' },
+            ],
          },
          {
-               name: 'Đông Bắc Bộ',
-               location: [
-                  { value: 'Hà Giang', title: 'Hà Giang' },
-                  { value: 'Cao Bằng', title: 'Cao Bằng' },
-                  { value: 'Lạng Sơn', title: 'Lạng Sơn' },
-                  { value: 'Thái Nguyên', title: 'Thái Nguyên' },
-                  { value: 'Bắc Giang', title: 'Bắc Giang' },
-                  { value: 'Quảng Ninh', title: 'Quảng Ninh' },
-               ],
+            name: 'Đông Bắc Bộ',
+            location: [
+               { value: 'Hà Giang', title: 'Hà Giang' },
+               { value: 'Cao Bằng', title: 'Cao Bằng' },
+               { value: 'Lạng Sơn', title: 'Lạng Sơn' },
+               { value: 'Thái Nguyên', title: 'Thái Nguyên' },
+               { value: 'Bắc Giang', title: 'Bắc Giang' },
+               { value: 'Quảng Ninh', title: 'Quảng Ninh' },
+            ],
          },
       ],
    },
@@ -42,36 +42,36 @@ export const areaList = [
       name: 'Trung Bộ',
       sub_area: [
          {
-               name: 'Bắc Trung Bộ',
-               location: [
-                  { value: 'Thanh Hóa', title: 'Thanh Hóa' },
-                  { value: 'Nghệ An', title: 'Nghệ An' },
-                  { value: 'Hà Tĩnh', title: 'Hà Tĩnh' },
-                  { value: 'Quảng Bình', title: 'Quảng Bình' },
-                  { value: 'Quảng Trị', title: 'Quảng Trị' },
-                  { value: 'Thừa Thiên - Huế', title: 'Thừa Thiên - Huế' },
-               ],
+            name: 'Bắc Trung Bộ',
+            location: [
+               { value: 'Thanh Hóa', title: 'Thanh Hóa' },
+               { value: 'Nghệ An', title: 'Nghệ An' },
+               { value: 'Hà Tĩnh', title: 'Hà Tĩnh' },
+               { value: 'Quảng Bình', title: 'Quảng Bình' },
+               { value: 'Quảng Trị', title: 'Quảng Trị' },
+               { value: 'Thừa Thiên - Huế', title: 'Thừa Thiên - Huế' },
+            ],
          },
          {
-               name: 'Duyên hải Nam Trung Bộ',
-               location: [
-                  { value: 'Đà Nẵng', title: 'Đà Nẵng' },
-                  { value: 'Quảng Ngãi', title: 'Quảng Ngãi' },
-                  { value: 'Bình Định', title: 'Bình Định' },
-                  { value: 'Phú Yên', title: 'Phú Yên' },
-                  { value: 'Khánh Hòa', title: 'Khánh Hòa' },
-                  { value: 'Bình Thuận', title: 'Bình Thuận' },
-               ],
+            name: 'Duyên hải Nam Trung Bộ',
+            location: [
+               { value: 'Đà Nẵng', title: 'Đà Nẵng' },
+               { value: 'Quảng Ngãi', title: 'Quảng Ngãi' },
+               { value: 'Bình Định', title: 'Bình Định' },
+               { value: 'Phú Yên', title: 'Phú Yên' },
+               { value: 'Khánh Hòa', title: 'Khánh Hòa' },
+               { value: 'Bình Thuận', title: 'Bình Thuận' },
+            ],
          },
          {
-               name: 'Tây nguyên',
-               location: [
-                  { value: 'Gia Lai', title: 'Gia Lai' },
-                  { value: 'Kon Tum', title: 'Kon Tum' },
-                  { value: 'Đắk Lắk', title: 'Đắk Lắk' },
-                  { value: 'Lâm Đồng', title: 'Lâm Đồng' },
-                  { value: 'Đắk Nông', title: 'Đắk Nông' },
-               ],
+            name: 'Tây nguyên',
+            location: [
+               { value: 'Gia Lai', title: 'Gia Lai' },
+               { value: 'Kon Tum', title: 'Kon Tum' },
+               { value: 'Đắk Lắk', title: 'Đắk Lắk' },
+               { value: 'Lâm Đồng', title: 'Lâm Đồng' },
+               { value: 'Đắk Nông', title: 'Đắk Nông' },
+            ],
          },
       ],
    },
@@ -79,67 +79,67 @@ export const areaList = [
       name: 'Nam Bộ',
       sub_area: [
          {
-               name: 'Đông Nam Bộ',
-               location: [
-                  { value: 'TP Hồ Chí Minh', title: 'TP Hồ Chí Minh' },
-                  { value: 'Bình Dương', title: 'Bình Dương' },
-                  { value: 'Tây Ninh', title: 'Tây Ninh' },
-                  { value: 'Đồng Nai', title: 'Đồng Nai' },
-                  { value: 'Bà Rịa - Vũng Tàu', title: 'Bà Rịa - Vũng Tàu' },
-               ],
+            name: 'Đông Nam Bộ',
+            location: [
+               { value: 'TP Hồ Chí Minh', title: 'TP Hồ Chí Minh' },
+               { value: 'Bình Dương', title: 'Bình Dương' },
+               { value: 'Tây Ninh', title: 'Tây Ninh' },
+               { value: 'Đồng Nai', title: 'Đồng Nai' },
+               { value: 'Bà Rịa - Vũng Tàu', title: 'Bà Rịa - Vũng Tàu' },
+            ],
          },
          {
-               name: 'Đồng bằng sông Cửu Long',
-               location: [
-                  { value: 'Đồng Tháp', title: 'Đồng Tháp' },
-                  { value: 'Bến Tre', title: 'Bến Tre' },
-                  { value: 'An Giang', title: 'An Giang' },
-                  { value: 'Cần Thơ', title: 'Cần Thơ' },
-                  { value: 'Trà Vinh', title: 'Trà Vinh' },
-                  { value: 'Bạc Liêu', title: 'Bạc Liêu' },
-                  { value: 'Cà Mau', title: 'Cà Mau' },
-               ],
+            name: 'Đồng bằng sông Cửu Long',
+            location: [
+               { value: 'Đồng Tháp', title: 'Đồng Tháp' },
+               { value: 'Bến Tre', title: 'Bến Tre' },
+               { value: 'An Giang', title: 'An Giang' },
+               { value: 'Cần Thơ', title: 'Cần Thơ' },
+               { value: 'Trà Vinh', title: 'Trà Vinh' },
+               { value: 'Bạc Liêu', title: 'Bạc Liêu' },
+               { value: 'Cà Mau', title: 'Cà Mau' },
+            ],
          },
       ],
    },
 ];
 
-export const travelLocationList = [
+export const TRAVEL_AREA = [
    {
       name: 'Bắc Bộ',
       sub_area: [
          {
-               name: 'Đồng bằng sông Hồng',
-               location: [
-                  { value: 'Đại Lải', title: 'Đại Lải', inside: 'Vĩnh Phúc' },
-                  { value: 'Tam Đảo', title: 'Tam Đảo', inside: 'Vĩnh Phúc' },
-                  { value: 'Cát Bà', title: 'Cát Bà', inside: 'Hải Phòng' },
-                  { value: 'Đồ Sơn', title: 'Đồ Sơn', inside: 'Hải Phòng' },
-                  { value: 'Tràng An', title: 'Tràng An', inside: 'Ninh Bình' },
-                  { value: 'Hoa Lư', title: 'Hoa Lư', inside: 'Ninh Bình' },
-               ],
+            name: 'Đồng bằng sông Hồng',
+            location: [
+               { value: 'Đại Lải', title: 'Đại Lải', inside: 'Vĩnh Phúc' },
+               { value: 'Tam Đảo', title: 'Tam Đảo', inside: 'Vĩnh Phúc' },
+               { value: 'Cát Bà', title: 'Cát Bà', inside: 'Hải Phòng' },
+               { value: 'Đồ Sơn', title: 'Đồ Sơn', inside: 'Hải Phòng' },
+               { value: 'Tràng An', title: 'Tràng An', inside: 'Ninh Bình' },
+               { value: 'Hoa Lư', title: 'Hoa Lư', inside: 'Ninh Bình' },
+            ],
          },
          {
-               name: 'Tây Bắc Bộ',
-               location: [
-                  { value: 'Sa Pa', title: 'Sa Pa', inside: 'Lào Cai' },
-                  { value: 'Ô Quy Hồ', title: 'Ô Quy Hồ', inside: 'Lai Châu' },
-                  { value: 'Fanxipan', title: 'Fanxipan', inside: 'Lào Cai' },
-                  { value: 'Mù Cang Chải', title: 'Mù Cang Chải', inside: 'Yên Bái' },
-                  { value: 'Tà Xùa', title: 'Tà Xùa', inside: 'Sơn La' },
-                  { value: 'Mai Châu', title: 'Mai Châu', inside: 'Hòa Bình' },
-               ],
+            name: 'Tây Bắc Bộ',
+            location: [
+               { value: 'Sa Pa', title: 'Sa Pa', inside: 'Lào Cai' },
+               { value: 'Ô Quy Hồ', title: 'Ô Quy Hồ', inside: 'Lai Châu' },
+               { value: 'Fanxipan', title: 'Fanxipan', inside: 'Lào Cai' },
+               { value: 'Mù Cang Chải', title: 'Mù Cang Chải', inside: 'Yên Bái' },
+               { value: 'Tà Xùa', title: 'Tà Xùa', inside: 'Sơn La' },
+               { value: 'Mai Châu', title: 'Mai Châu', inside: 'Hòa Bình' },
+            ],
          },
          {
-               name: 'Đông Bắc Bộ',
-               location: [
-                  { value: 'Mã Pí Lèng', title: 'Mã Pí Lèng', inside: 'Hà Giang' },
-                  { value: 'Bản Giốc', title: 'Bản Giốc', inside: 'Cao Bằng' },
-                  { value: 'Hồ Ba Bể', title: 'Hồ Ba Bể', inside: 'Bắc Kạn' },
-                  { value: 'Yên Tử', title: 'Yên Tử', inside: 'Quảng Ninh' },
-                  { value: 'Hạ Long', title: 'Hạ Long', inside: 'Quảng Ninh' },
-                  { value: 'Cô Tô', title: 'Cô Tô', inside: 'Quảng Ninh' },
-               ],
+            name: 'Đông Bắc Bộ',
+            location: [
+               { value: 'Mã Pí Lèng', title: 'Mã Pí Lèng', inside: 'Hà Giang' },
+               { value: 'Bản Giốc', title: 'Bản Giốc', inside: 'Cao Bằng' },
+               { value: 'Hồ Ba Bể', title: 'Hồ Ba Bể', inside: 'Bắc Kạn' },
+               { value: 'Yên Tử', title: 'Yên Tử', inside: 'Quảng Ninh' },
+               { value: 'Hạ Long', title: 'Hạ Long', inside: 'Quảng Ninh' },
+               { value: 'Cô Tô', title: 'Cô Tô', inside: 'Quảng Ninh' },
+            ],
          },
       ],
    },
@@ -147,35 +147,35 @@ export const travelLocationList = [
       name: 'Trung Bộ',
       sub_area: [
          {
-               name: 'Bắc Trung Bộ',
-               location: [
-                  { value: 'Sầm Sơn', title: 'Sầm Sơn', inside: 'Thanh Hóa' },
-                  { value: 'Cửa Lò', title: 'Cửa Lò', inside: 'Nghệ An' },
-                  { value: 'Bãi Lữ', title: 'Bãi Lữ', inside: 'Nghệ An' },
-                  { value: 'Phong Nha - Kẻ Bàng', title: 'Phong Nha - Kẻ Bàng', inside: 'Quảng Bình' },
-                  { value: 'Sơn Đoòng', title: 'Sơn Đoòng', inside: 'Quảng Bình' },
-                  { value: 'Lăng Cô', title: 'Lăng Cô', inside: 'Thừa Thiên - Huế' },
-               ],
+            name: 'Bắc Trung Bộ',
+            location: [
+               { value: 'Sầm Sơn', title: 'Sầm Sơn', inside: 'Thanh Hóa' },
+               { value: 'Cửa Lò', title: 'Cửa Lò', inside: 'Nghệ An' },
+               { value: 'Bãi Lữ', title: 'Bãi Lữ', inside: 'Nghệ An' },
+               { value: 'Phong Nha - Kẻ Bàng', title: 'Phong Nha - Kẻ Bàng', inside: 'Quảng Bình' },
+               { value: 'Sơn Đoòng', title: 'Sơn Đoòng', inside: 'Quảng Bình' },
+               { value: 'Lăng Cô', title: 'Lăng Cô', inside: 'Thừa Thiên - Huế' },
+            ],
          },
          {
-               name: 'Duyên hải Nam Trung Bộ',
-               location: [
-                  { value: 'Bà Nà', title: 'Bà Nà', inside: 'Đà Nẵng' },
-                  { value: 'Mỹ Sơn', title: 'Mỹ Sơn', inside: 'Quảng Nam' },
-                  { value: 'Hội An', title: 'Hội An', inside: 'Quảng Nam' },
-                  { value: 'Nha Trang', title: 'Nha Trang', inside: 'Khánh Hòa' },
-                  { value: 'Lý Sơn', title: 'Lý Sơn', inside: 'Quảng Ngãi' },
-                  { value: 'Bãi Xép', title: 'Bãi Xép', inside: 'Phú Yên' },
-                  { value: 'Mũi Né', title: 'Mũi Né', inside: 'Bình Thuận' },
-               ],
+            name: 'Duyên hải Nam Trung Bộ',
+            location: [
+               { value: 'Bà Nà', title: 'Bà Nà', inside: 'Đà Nẵng' },
+               { value: 'Mỹ Sơn', title: 'Mỹ Sơn', inside: 'Quảng Nam' },
+               { value: 'Hội An', title: 'Hội An', inside: 'Quảng Nam' },
+               { value: 'Nha Trang', title: 'Nha Trang', inside: 'Khánh Hòa' },
+               { value: 'Lý Sơn', title: 'Lý Sơn', inside: 'Quảng Ngãi' },
+               { value: 'Bãi Xép', title: 'Bãi Xép', inside: 'Phú Yên' },
+               { value: 'Mũi Né', title: 'Mũi Né', inside: 'Bình Thuận' },
+            ],
          },
          {
-               name: 'Tây nguyên',
-               location: [
-                  { value: 'Biển Hồ', title: 'Biển Hồ', inside: 'Gia Lai' },
-                  { value: 'Đà Lạt', title: 'Đà Lạt', inside: 'Lâm Đồng' },
-                  { value: 'Tà Năng', title: 'Tà Năng', inside: 'Lâm Đồng' },
-               ],
+            name: 'Tây nguyên',
+            location: [
+               { value: 'Biển Hồ', title: 'Biển Hồ', inside: 'Gia Lai' },
+               { value: 'Đà Lạt', title: 'Đà Lạt', inside: 'Lâm Đồng' },
+               { value: 'Tà Năng', title: 'Tà Năng', inside: 'Lâm Đồng' },
+            ],
          },
       ],
    },
@@ -183,28 +183,28 @@ export const travelLocationList = [
       name: 'Nam Bộ',
       sub_area: [
          {
-               name: 'Đông Nam Bộ',
-               location: [
-                  { value: 'Núi Bà Đen', title: 'Núi Bà Đen', inside: 'Tây Ninh' },
-                  { value: 'Giang Điền', title: 'Giang Điền', inside: 'Đồng Nai' },
-                  { value: 'Vũng Tàu', title: 'Vũng Tàu', inside: 'Bà Rịa - Vũng Tàu' },
-               ],
+            name: 'Đông Nam Bộ',
+            location: [
+               { value: 'Núi Bà Đen', title: 'Núi Bà Đen', inside: 'Tây Ninh' },
+               { value: 'Giang Điền', title: 'Giang Điền', inside: 'Đồng Nai' },
+               { value: 'Vũng Tàu', title: 'Vũng Tàu', inside: 'Bà Rịa - Vũng Tàu' },
+            ],
          },
          {
-               name: 'Đồng bằng sông Cửu Long',
-               location: [
-                  { value: 'Đồng Sen Tháp Mười', title: 'Đồng Sen Tháp Mười', inside: 'Đồng Tháp' },
-                  { value: 'Cái Bè', title: 'Cái Bè', inside: 'Tiền Giang' },
-                  { value: 'Thất Sơn', title: 'Thất Sơn', inside: 'An Giang' },
-                  { value: 'Hòn Đá Bạc', title: 'Hòn Đá Bạc', inside: 'Cà Mau' },
-                  { value: 'Phú Quốc', title: 'Phú Quốc', inside: 'Kiên Giang' },
-               ],
+            name: 'Đồng bằng sông Cửu Long',
+            location: [
+               { value: 'Đồng Sen Tháp Mười', title: 'Đồng Sen Tháp Mười', inside: 'Đồng Tháp' },
+               { value: 'Cái Bè', title: 'Cái Bè', inside: 'Tiền Giang' },
+               { value: 'Thất Sơn', title: 'Thất Sơn', inside: 'An Giang' },
+               { value: 'Hòn Đá Bạc', title: 'Hòn Đá Bạc', inside: 'Cà Mau' },
+               { value: 'Phú Quốc', title: 'Phú Quốc', inside: 'Kiên Giang' },
+            ],
          },
       ],
    },
 ];
 
-export const province = {
+export const LOCATION = {
    // TỈNH / THÀNH PHỐ
    // BẮC BỘ
    // Đồng bằng sông Hồng
