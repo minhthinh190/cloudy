@@ -45,14 +45,9 @@ class CurrentWeather extends React.Component {
       });
    }
 
-   componentWillUnmount() {
-      clearInterval(this.interval);
-   }
-
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
          const location = province[`${this.props.location}`];
-         console.log('update location: ' + location.name);
 
          getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
             this.setState({
