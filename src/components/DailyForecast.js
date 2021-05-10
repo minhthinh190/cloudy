@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {getDailyWeather} from '../api/provider.js';
-import {weatherIcon, weatherIconFormat} from '../api/provider.js';
-import {province} from '../api/location.js';
-import {timestampToDate} from '../utils.js';
+import { getDailyWeather } from '../services/provider';
+import { WEATHER_ICON, WEATHER_ICON_FORMAT } from '../services/provider';
+import { LOCATION } from '../services/location';
+import { timestampToDate } from '../utils';
 
 class DailyForecast extends React.Component {
    constructor(props) {
@@ -15,9 +15,9 @@ class DailyForecast extends React.Component {
    }
 
    componentDidMount() {
-      const location = province[`${this.state.location}`];
+      const location = LOCATION[`${this.state.location}`];
 
-      getDailyWeather(location.coord.lat, location.coord.lon).then(val => {
+      getDailyWeather(location.coord.lat, location.coord.lon).then((val) => {
          // remove today weather from the daily forecast list
          val.daily.shift();
 
@@ -30,9 +30,9 @@ class DailyForecast extends React.Component {
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = province[`${this.props.location}`];
+         const location = LOCATION[`${this.props.location}`];
 
-         getDailyWeather(location.coord.lat, location.coord.lon).then(val => {
+         getDailyWeather(location.coord.lat, location.coord.lon).then((val) => {
                // remove today weather from the daily forecast list
                val.daily.shift();
 
@@ -57,9 +57,9 @@ class DailyForecast extends React.Component {
                                  <p className="max-temp">{Math.round(element.temp.max)} <span>°</span></p>
                                  <p className="min-temp">{Math.round(element.temp.min)} <span>°</span></p>
                                  <img 
-                                       className="forecast-weather-icon"
-                                       src={weatherIcon + element.weather[0].icon + weatherIconFormat}
-                                       alt="weather icon"
+                                    className="forecast-weather-icon"
+                                    src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
+                                    alt="weather icon"
                                  />
                               </div>
                            );

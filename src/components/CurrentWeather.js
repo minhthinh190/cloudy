@@ -1,130 +1,108 @@
 import React from 'react';
 
-import {getCurrentWeather} from '../api/provider.js';
-import {weatherIcon, weatherIconFormat} from '../api/provider.js';
-import {province} from '../api/location.js';
-import {timestampToTime, toVietnamese} from '../utils.js';
+import { getCurrentWeather } from '../services/provider';
+import { WEATHER_ICON, WEATHER_ICON_FORMAT } from '../services/provider';
+import { LOCATION } from '../services/location';
+import { timestampToTime, toVietnamese } from '../utils';
 
 class CurrentWeather extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
          location: this.props.location,
-         temp: '',
-         weather: '',
-         weather_icon: '',
-         feels_like: '',
-         clouds: '',
-         humidity: '',
-         uv: '',
-         visibility: '',
-         wind_speed: '',
-         sunrise: '',
-         sunset: '',
+         isLoading: true,
+         weatherData: {},
       };
    }
 
    componentDidMount() {
-      const location = province[`${this.state.location}`];
+      const location = LOCATION[`${this.state.location}`];
 
-      getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
+      getCurrentWeather(location.coord.lat, location.coord.lon).then((data) => {
          this.setState({
-               location: this.props.location,
-               temp: val.current.temp,
-               weather: val.current.weather[0].description,
-               weather_icon: val.current.weather[0].icon,
-               feels_like: val.current.feels_like,
-               clouds: val.current.clouds,
-               humidity: val.current.humidity,
-               uv: val.current.uvi,
-               visibility: val.current.visibility,
-               wind_speed: val.current.wind_speed,
-               sunrise: val.current.sunrise,
-               sunset: val.current.sunset,
+            location: this.props.location,
+            isLoading: false,
+            weatherData: data.current,
          });
       });
    }
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = province[`${this.props.location}`];
+         const location = LOCATION[`${this.props.location}`];
 
-         getCurrentWeather(location.coord.lat, location.coord.lon).then(val => {
+         getCurrentWeather(location.coord.lat, location.coord.lon).then((data) => {
             this.setState({
-                  location: this.props.location,
-                  temp: val.current.temp,
-                  weather: val.current.weather[0].description,
-                  weather_icon: val.current.weather[0].icon,
-                  feels_like: val.current.feels_like,
-                  clouds: val.current.clouds,
-                  humidity: val.current.humidity,
-                  uv: val.current.uvi,
-                  visibility: val.current.visibility,
-                  wind_speed: val.current.wind_speed,
-                  sunrise: val.current.sunrise,
-                  sunset: val.current.sunset,
+               location: this.props.location,
+               isLoading: false,
+               weatherData: data.current,
             });
          });
       }
    }
 
    render() {
-      return (
-         <div className="current-container">
-               <div className="current-main">
-                  <p className="current-location">{this.state.location}</p>
-                  <p className="current-temp">{Math.round(this.state.temp)} °C</p>
-                  <img 
-                     className="current-weather-icon"
-                     src={weatherIcon + this.state.weather_icon + weatherIconFormat} 
-                     alt="weather icon"
-                  />
-                  <p className="current-weather">{toVietnamese(this.state.weather)}</p>
-               </div>
-               <div className="current-details">
-                  <table className="table-details">
-                     <tbody>
+      if (this.state.isLoading) {
+         return <div></div>;
+      }
+      else {
+         return (
+            <div className="current-container">
+                  <div className="current-main">
+                     <p className="current-location">{this.state.location}</p>
+                     <p className="current-temp">{Math.round(this.state.weatherData.temp)} °C</p>
+                     <img 
+                        className="current-weather-icon"
+                        src={WEATHER_ICON + this.state.weatherData.weather[0].icon + WEATHER_ICON_FORMAT} 
+                        alt="weather icon"
+                     />
+                     <p className="current-weather">{toVietnamese(this.state.weatherData.weather[0].description)}</p>
+                  </div>
+                  <div className="current-details">
+                     <table className="table-details">
+                        <tbody>
                            <tr>
                               <td>Nhiệt độ cảm nhận</td>
-                              <td className="detail-val">{Math.round(this.state.feels_like)} °C</td>
+                              <td className="detail-val">{Math.round(this.state.weatherData.feels_like)} °C</td>
                            </tr>
                            <tr>
                               <td>Độ ẩm</td>
-                              <td className="detail-val">{this.state.humidity} %</td>
+                              <td className="detail-val">{this.state.weatherData.humidity} %</td>
                            </tr>
                            <tr>
                               <td>Tầm nhìn xa</td>
-                              <td className="detail-val">{this.state.visibility / 1000} km</td>
+                              <td className="detail-val">{this.state.weatherData.visibility / 1000} km</td>
                            </tr>
                            <tr>
                               <td>Mặt trời mọc</td>
-                              <td className="detail-val">{timestampToTime(this.state.sunrise)}</td>
+                              <td className="detail-val">{timestampToTime(this.state.weatherData.sunrise)}</td>
                            </tr>
-                     </tbody>
-                  </table>
-                  <table className="table-details">
-                     <tbody>
-                           <tr>
-                              <td>Tỉ lệ mây</td>
-                              <td className="detail-val">{this.state.clouds} %</td>
-                           </tr>
-                           <tr>
-                              <td>Chỉ số UV</td>
-                              <td className="detail-val">{this.state.uv}</td>
-                           </tr>
-                           <tr>
-                              <td>Gió</td>
-                              <td className="detail-val">{Math.round(this.state.wind_speed * 3.6)} km/h</td>
-                           </tr>
-                           <tr>
-                              <td>Mặt trời lặn</td>
-                              <td className="detail-val">{timestampToTime(this.state.sunset)}</td>
-                           </tr>
-                     </tbody>
-                  </table>
-               </div>
-         </div>
-      );
+                        </tbody>
+                     </table>
+                     <table className="table-details">
+                        <tbody>
+                              <tr>
+                                 <td>Tỉ lệ mây</td>
+                                 <td className="detail-val">{this.state.weatherData.clouds} %</td>
+                              </tr>
+                              <tr>
+                                 <td>Chỉ số UV</td>
+                                 <td className="detail-val">{this.state.weatherData.uvi}</td>
+                              </tr>
+                              <tr>
+                                 <td>Gió</td>
+                                 <td className="detail-val">{Math.round(this.state.weatherData.wind_speed * 3.6)} km/h</td>
+                              </tr>
+                              <tr>
+                                 <td>Mặt trời lặn</td>
+                                 <td className="detail-val">{timestampToTime(this.state.weatherData.sunset)}</td>
+                              </tr>
+                        </tbody>
+                     </table>
+                  </div>
+            </div>
+         );
+      }
    }
 }
 

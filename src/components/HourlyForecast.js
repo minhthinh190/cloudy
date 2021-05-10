@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {getHourlyWeather} from '../api/provider.js';
-import {weatherIcon, weatherIconFormat} from '../api/provider.js';
-import {province} from '../api/location.js';
-import {timestampToTime} from '../utils.js';
+import { getHourlyWeather } from '../services/provider';
+import { WEATHER_ICON, WEATHER_ICON_FORMAT } from '../services/provider';
+import { LOCATION } from '../services/location';
+import { timestampToTime } from '../utils';
 
 import uv_icon from '../uv_icon.png';
 
@@ -17,9 +17,9 @@ class HourlyForecast extends React.Component {
    }
 
    componentDidMount() {
-      const location = province[`${this.state.location}`];
+      const location = LOCATION[`${this.state.location}`];
 
-      getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
+      getHourlyWeather(location.coord.lat, location.coord.lon).then((val) => {
          this.setState({
                location: this.props.location,
                weatherData: val.hourly,
@@ -29,9 +29,9 @@ class HourlyForecast extends React.Component {
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = province[`${this.props.location}`];
+         const location = LOCATION[`${this.props.location}`];
 
-         getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
+         getHourlyWeather(location.coord.lat, location.coord.lon).then((val) => {
             this.setState({
                location: this.props.location,
                weatherData: val.hourly,
@@ -52,9 +52,9 @@ class HourlyForecast extends React.Component {
                                  <p className="time">{timestampToTime(element.dt)}</p>
                                  <p className="max-temp">{Math.round(element.temp)} <span>°</span></p>
                                  <img 
-                                       className="forecast-weather-icon"
-                                       src={weatherIcon + element.weather[0].icon + weatherIconFormat}
-                                       alt="weather icon"
+                                    className="forecast-weather-icon"
+                                    src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
+                                    alt="weather icon"
                                  />
                                  <div className="forecast-uv-container">
                                     <img className="forecast-uv-icon" src={uv_icon} alt="uv icon"/>

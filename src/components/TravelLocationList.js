@@ -1,5 +1,5 @@
 import React from 'react';
-import {travelLocationList} from '../api/location.js';
+import { TRAVEL_AREA } from '../services/location';
 
 function TravelLocationList(props) {
    const handleLocationSelect = (e) => {
@@ -9,10 +9,10 @@ function TravelLocationList(props) {
    return (
       <div className="dropdown-content dropdown-content-travel">
             <div className="dropdown-area-container">
-               <h2 className="area-name">{travelLocationList[0].name}</h2>
+               <h2 className="area-name">{TRAVEL_AREA[0].name}</h2>
                {
-                  travelLocationList[0].sub_area.map(sub_area => {
-                        let locationList = sub_area.location.map(location => {
+                  TRAVEL_AREA[0].sub_area.map((subArea) => {
+                        let locationList = subArea.location.map((location) => {
                            return (
                               <button 
                                  className="dropdown-option" 
@@ -20,23 +20,23 @@ function TravelLocationList(props) {
                                  value={location.title} 
                                  onClick={handleLocationSelect}
                               >
-                                    {location.title}
+                                 {location.title}
                               </button>
                            );
                         });
                         locationList.unshift(
-                           <h3 className="subarea-name" key={sub_area.name}>{sub_area.name}</h3>
+                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
                         );
                         
-                        return <div className="dropdown-subarea-container" key={sub_area.name}>{locationList}</div>;
+                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
                   })
                }
             </div>
             <div className="dropdown-area-container">
-               <h2 className="area-name">{travelLocationList[1].name}</h2>
+               <h2 className="area-name">{TRAVEL_AREA[1].name}</h2>
                {
-                  travelLocationList[1].sub_area.map(sub_area => {
-                        let locationList = sub_area.location.map(location => {
+                  TRAVEL_AREA[1].sub_area.map((subArea) => {
+                        let locationList = subArea.location.map((location) => {
                            return (
                               <button 
                                  className="dropdown-option" 
@@ -44,23 +44,23 @@ function TravelLocationList(props) {
                                  value={location.title} 
                                  onClick={handleLocationSelect}
                               >
-                                    {location.title}
+                                 {location.title}
                               </button>
                            );
                         });
                         locationList.unshift(
-                           <h3 className="subarea-name" key={sub_area.name}>{sub_area.name}</h3>
+                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
                         );
                         
-                        return <div className="dropdown-subarea-container" key={sub_area.name}>{locationList}</div>;
+                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
                   })
                }
             </div>
             <div className="dropdown-area-container">
-               <h2 className="area-name">{travelLocationList[2].name}</h2>
+               <h2 className="area-name">{TRAVEL_AREA[2].name}</h2>
                {
-                  travelLocationList[2].sub_area.map(sub_area => {
-                        let locationList = sub_area.location.map(location => {
+                  TRAVEL_AREA[2].sub_area.map((subArea) => {
+                        let locationList = subArea.location.map((location) => {
                            return (
                               <button 
                                  className="dropdown-option" 
@@ -68,15 +68,15 @@ function TravelLocationList(props) {
                                  value={location.title} 
                                  onClick={handleLocationSelect}
                               >
-                                    {location.title}
+                                 {location.title}
                               </button>
                            );
                         });
                         locationList.unshift(
-                           <h3 className="subarea-name" key={sub_area.name}>{sub_area.name}</h3>
+                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
                         );
                         
-                        return <div className="dropdown-subarea-container" key={sub_area.name}>{locationList}</div>;
+                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
                   })
                }
             </div>

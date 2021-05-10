@@ -1,6 +1,6 @@
 import React from 'react';
-import LocationList from './LocationList.js';
-import TravelLocationList from './TravelLocationList.js';
+import LocationList from './LocationList';
+import TravelLocationList from './TravelLocationList';
 
 function Navbar(props) {
    return (
