@@ -3,7 +3,7 @@ const API_KEY = '373a59a53a6e12d6492b8823e6963f5f';
 const FORECAST_WEATHER =  new URL("https://api.openweathermap.org/data/2.5/onecall?");
 const CURRENT_WEATHER = new URL("https://api.openweathermap.org/data/2.5/onecall?");
 
-const AIR_QUALITY = new URL("http://api.openweathermap.org/data/2.5/air_pollution?");
+const AIR_QUALITY = new URL("https://api.openweathermap.org/data/2.5/air_pollution?");
 
 export const WEATHER_ICON = new URL("https://openweathermap.org/img/wn/");
 export const WEATHER_ICON_FORMAT = "@2x.png";
