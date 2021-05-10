@@ -7,17 +7,21 @@ export const areaList = [
                location: [
                   { value: 'Hà Nội', title: 'Hà Nội' },
                   { value: 'Bắc Ninh', title: 'Bắc Ninh' },
+                  { value: 'Hà Nam', title: 'Hà Nam' },
                   { value: 'Hải Dương', title: 'Hải Dương' },
-                  { value: 'Nam Định', title: 'Nam Định' },
                   { value: 'Hải Phòng', title: 'Hải Phòng' },
+                  { value: 'Thái Bình', title: 'Thái Bình' },
+                  { value: 'Nam Định', title: 'Nam Định' },
                ],
          },
          {
                name: 'Tây Bắc Bộ',
                location: [
+                  { value: 'Lai Châu', title: 'Lai Châu' },
+                  { value: 'Lào Cai', title: 'Lào Cai' },
                   { value: 'Điện Biên', title: 'Điện Biên' },
-                  { value: 'Sơn La', title: 'Sơn La' },
                   { value: 'Yên Bái', title: 'Yên Bái' },
+                  { value: 'Sơn La', title: 'Sơn La' },
                   { value: 'Hòa Bình', title: 'Hòa Bình' },
                ],
          },
@@ -27,8 +31,9 @@ export const areaList = [
                   { value: 'Hà Giang', title: 'Hà Giang' },
                   { value: 'Cao Bằng', title: 'Cao Bằng' },
                   { value: 'Lạng Sơn', title: 'Lạng Sơn' },
-                  { value: 'Quảng Ninh', title: 'Quảng Ninh' },
+                  { value: 'Thái Nguyên', title: 'Thái Nguyên' },
                   { value: 'Bắc Giang', title: 'Bắc Giang' },
+                  { value: 'Quảng Ninh', title: 'Quảng Ninh' },
                ],
          },
       ],
@@ -62,9 +67,10 @@ export const areaList = [
                name: 'Tây nguyên',
                location: [
                   { value: 'Gia Lai', title: 'Gia Lai' },
+                  { value: 'Kon Tum', title: 'Kon Tum' },
                   { value: 'Đắk Lắk', title: 'Đắk Lắk' },
                   { value: 'Lâm Đồng', title: 'Lâm Đồng' },
-                  { value: 'Kon Tum', title: 'Kon Tum' },
+                  { value: 'Đắk Nông', title: 'Đắk Nông' },
                ],
          },
       ],
@@ -77,15 +83,20 @@ export const areaList = [
                location: [
                   { value: 'TP Hồ Chí Minh', title: 'TP Hồ Chí Minh' },
                   { value: 'Bình Dương', title: 'Bình Dương' },
+                  { value: 'Tây Ninh', title: 'Tây Ninh' },
+                  { value: 'Đồng Nai', title: 'Đồng Nai' },
                   { value: 'Bà Rịa - Vũng Tàu', title: 'Bà Rịa - Vũng Tàu' },
                ],
          },
          {
                name: 'Đồng bằng sông Cửu Long',
                location: [
+                  { value: 'Đồng Tháp', title: 'Đồng Tháp' },
                   { value: 'Bến Tre', title: 'Bến Tre' },
                   { value: 'An Giang', title: 'An Giang' },
                   { value: 'Cần Thơ', title: 'Cần Thơ' },
+                  { value: 'Trà Vinh', title: 'Trà Vinh' },
+                  { value: 'Bạc Liêu', title: 'Bạc Liêu' },
                   { value: 'Cà Mau', title: 'Cà Mau' },
                ],
          },
@@ -198,266 +209,299 @@ export const province = {
    // BẮC BỘ
    // Đồng bằng sông Hồng
    'Hà Nội': {
-      name: 'Hà Nội', sub_area: 'Đồng bằng sông Hồng', area: 'Bắc Bộ', coord: { lon: '105.8412', lat: '21.0245' },
+      name: 'Hà Nội', coord: { lon: '105.8412', lat: '21.0245' },
    },
    'Bắc Ninh' : {
-      name: 'Bắc Ninh', sub_area: 'Đồng bằng sông Hồng', area: 'Bắc Bộ', coord: { lon: '106.050003', lat: '21.183331' },
+      name: 'Bắc Ninh', coord: { lon: '106.050003', lat: '21.183331' },
+   },
+   'Hà Nam': {
+      name: 'Hà Nam', coord: { lon: '105.923996', lat: '20.585867' },
    },
    'Hải Dương' : {
-      name: 'Hải Dương', sub_area: 'Đồng bằng sông Hồng', area: 'Bắc Bộ', coord: { lon: '106.316673', lat: '20.933331' },
-   },
-   'Nam Định' : {
-      name: 'Nam Định', sub_area: 'Đồng bằng sông Hồng', area: 'Bắc Bộ', coord: { lon: '106.1667', lat: '20.4167' },
+      name: 'Hải Dương', coord: { lon: '106.316673', lat: '20.933331' },
    },
    'Hải Phòng' : {
-      name: 'Hải Phòng', sub_area: 'Đồng bằng sông Hồng', area: 'Bắc Bộ', coord: { lon: '106.5833', lat: '20.8333' },
+      name: 'Hải Phòng', coord: { lon: '106.5833', lat: '20.8333' },
+   },
+   'Thái Bình' : {
+      name: 'Thái Bình', coord: { lon: '106.344722', lat: '20.453056' },
+   },
+   'Nam Định' : {
+      name: 'Nam Định', coord: { lon: '106.1667', lat: '20.4167' },
    },
    // Tây Bắc Bộ
-   'Điện Biên' : {
-      name: 'Điện Biên', sub_area: 'Tây Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '103.0167', lat: '21.3833' },
+   'Lai Châu' : {
+      name: 'Lai Châu', coord: { lon: '103.265991', lat: '22.362776' },
    },
-   'Sơn La' : {
-      name: 'Sơn La', sub_area: 'Tây Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '104', lat: '21.1667' },
+   'Lào Cai' : {
+      name: 'Lào Cai', coord: { lon: '103.983333', lat: '22.420278' },
+   },
+   'Điện Biên' : {
+      name: 'Điện Biên', coord: { lon: '103.0167', lat: '21.3833' },
    },
    'Yên Bái' : {
-      name: 'Yên Bái', sub_area: 'Tây Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '104.6667', lat: '21.5' },
+      name: 'Yên Bái', coord: { lon: '104.6667', lat: '21.5' },
+   },
+   'Sơn La' : {
+      name: 'Sơn La', coord: { lon: '104', lat: '21.1667' },
    },
    'Hòa Bình' : {
-      name: 'Hòa Bình', sub_area: 'Tây Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '105.338333', lat: '20.81333' },
+      name: 'Hòa Bình', coord: { lon: '105.338333', lat: '20.81333' },
    },
    // Đông Bắc Bộ
    'Hà Giang' : {
-      name: 'Hà Giang', sub_area: 'Đông Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '105', lat: '22.75' },
+      name: 'Hà Giang', coord: { lon: '105', lat: '22.75' },
    },
    'Cao Bằng' : {
-      name: 'Cao Bằng', sub_area: 'Đông Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '106.25', lat: '22.6667' },
+      name: 'Cao Bằng', coord: { lon: '106.25', lat: '22.6667' },
    },
    'Lạng Sơn' : {
-      name: 'Lạng Sơn', sub_area: 'Đông Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '106.5', lat: '21.75' },
+      name: 'Lạng Sơn', coord: { lon: '106.5', lat: '21.75' },
    },
-   'Quảng Ninh' : {
-      name: 'Quảng Ninh', sub_area: 'Đông Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '107.3333', lat: '21.25' },
+   'Thái Nguyên' : {
+      name: 'Thái Nguyên', coord: { lon: '105.876944', lat: '21.590833' },
    },
    'Bắc Giang' : {
-      name: 'Bắc Giang', sub_area: 'Đông Bắc Bộ', area: 'Bắc Bộ', coord: { lon: '106.3333', lat: '21.3333' },
+      name: 'Bắc Giang', coord: { lon: '106.3333', lat: '21.3333' },
+   },
+   'Quảng Ninh' : {
+      name: 'Quảng Ninh', coord: { lon: '107.3333', lat: '21.25' },
    },
 
    // TRUNG BỘ
    // Bắc Trung Bộ
    'Thanh Hóa' : {
-      name: 'Thanh Hóa', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '105.7667', lat: '19.8' },
+      name: 'Thanh Hóa', coord: { lon: '105.7667', lat: '19.8' },
    },
    'Nghệ An' : {
-      name: 'Nghệ An', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '104.8333', lat: '19.3333' },
+      name: 'Nghệ An', coord: { lon: '104.8333', lat: '19.3333' },
    },
    'Hà Tĩnh' : {
-      name: 'Hà Tĩnh', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '105.900002', lat: '18.33333' },
+      name: 'Hà Tĩnh', coord: { lon: '105.900002', lat: '18.33333' },
    },
    'Quảng Bình' : {
-      name: 'Quảng Bình', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '106.3333', lat: '17.5' },
+      name: 'Quảng Bình', coord: { lon: '106.3333', lat: '17.5' },
    },
    'Quảng Trị' : {
-      name: 'Quảng Trị', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '107.2', lat: '16.75' },
+      name: 'Quảng Trị', coord: { lon: '107.2', lat: '16.75' },
    },
    'Thừa Thiên - Huế' : {
-      name: 'Thừa Thiên - Huế', sub_area: 'Bắc Trung Bộ', area: 'Trung Bộ', coord: { lon: '107.6', lat: '16.4667' },
+      name: 'Thừa Thiên - Huế', coord: { lon: '107.6', lat: '16.4667' },
    },
    // Duyên hải Nam Trung Bộ
    'Đà Nẵng' : {
-      name: 'Đà Nẵng', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '108.0833', lat: '16.0833' },
+      name: 'Đà Nẵng', coord: { lon: '108.0833', lat: '16.0833' },
    },
    'Quảng Ngãi' : {
-      name: 'Quảng Ngãi', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '108.8', lat: '15.1167' },
+      name: 'Quảng Ngãi', coord: { lon: '108.8', lat: '15.1167' },
    },
    'Bình Định' : {
-      name: 'Bình Định', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '109.0', lat: '14.16667' },
+      name: 'Bình Định', coord: { lon: '109.0', lat: '14.16667' },
    },
    'Phú Yên' : {
-      name: 'Phú Yên', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '109.166672', lat: '13.16667' },
+      name: 'Phú Yên', coord: { lon: '109.166672', lat: '13.16667' },
    },
    'Khánh Hòa' : {
-      name: 'Khánh Hòa', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '109', lat: '12.3333' },
+      name: 'Khánh Hòa', coord: { lon: '109', lat: '12.3333' },
    },
    'Bình Thuận' : {
-      name: 'Bình Thuận', sub_area: 'Duyên hải Nam Trung Bộ', area: 'Trung Bộ', coord: { lon: '108.0', lat: '11.08333' },
+      name: 'Bình Thuận', coord: { lon: '108.0', lat: '11.08333' },
    },
    // Tây Nguyên
    'Gia Lai' : {
-      name: 'Gia Lai', sub_area: 'Tây Nguyên', area: 'Trung Bộ', coord: { lon: '108.25', lat: '13.75' },
-   },
-   'Đắk Lắk' : {
-      name: 'Đắk Lắk', sub_area: 'Tây Nguyên', area: 'Trung Bộ', coord: { lon: '108.166672', lat: '12.83333' },
-   },
-   'Lâm Đồng' : {
-      name: 'Lâm Đồng', sub_area: 'Tây Nguyên', area: 'Trung Bộ', coord: { lon: '108.3333', lat: '11.5' },
+      name: 'Gia Lai', coord: { lon: '108.25', lat: '13.75' },
    },
    'Kon Tum' : {
-      name: 'Kon Tum', sub_area: 'Tây Nguyên', area: 'Trung Bộ', coord: { lon: '108.0', lat: '14.35' },
+      name: 'Kon Tum', coord: { lon: '108.0', lat: '14.35' },
+   },
+   'Đắk Lắk' : {
+      name: 'Đắk Lắk', coord: { lon: '108.166672', lat: '12.83333' },
+   },
+   'Lâm Đồng' : {
+      name: 'Lâm Đồng', coord: { lon: '108.3333', lat: '11.5' },
+   },
+   'Đắk Nông' : {
+      name: 'Đắk Nông', coord: { lon: '107.701721', lat: '12.256812' },
    },
 
    // NAM BỘ
    // Đông Nam Bộ
    'TP Hồ Chí Minh' : {
-      name: 'TP Hồ Chí Minh', sub_area: 'Đông Nam Bộ', area: 'Nam Bộ', coord: { lon: '106.6667', lat: '10.8333' },
+      name: 'TP Hồ Chí Minh', coord: { lon: '106.6667', lat: '10.8333' },
    },
    'Bình Dương' : {
-      name: 'Bình Dương', sub_area: 'Đông Nam Bộ', area: 'Nam Bộ', coord: { lon: '106.6667', lat: '11.1667' },
+      name: 'Bình Dương', coord: { lon: '106.6667', lat: '11.1667' },
+   },
+   'Tây Ninh' : {
+      name: 'Tây Ninh', coord: { lon: '106.118889', lat: '11.367778' },
+   },
+   'Đồng Nai' : {
+      name: 'Đồng Nai', coord: { lon: '107.146912', lat: '11.05443' },
    },
    'Bà Rịa - Vũng Tàu' : {
-      name: 'Bà Rịa - Vũng Tàu', sub_area: 'Đông Nam Bộ', area: 'Nam Bộ', coord: { lon: '107.0843', lat: '10.346' },
+      name: 'Bà Rịa - Vũng Tàu', coord: { lon: '107.0843', lat: '10.346' },
    },
    // Đồng bằng sông Cửu Long
+   'Đồng Tháp' : {
+      name: 'Đồng Tháp', coord: { lon: '105.682983', lat: '10.575572' },
+   },
    'Bến Tre' : {
-      name: 'Bến Tre', sub_area: 'Đồng bằng sông Cửu Long', area: 'Nam Bộ', coord: { lon: '106.5', lat: '10.16667' },
+      name: 'Bến Tre', coord: { lon: '106.5', lat: '10.16667' },
    },
    'An Giang' : {
-      name: 'An Giang', sub_area: 'Đồng bằng sông Cửu Long', area: 'Nam Bộ', coord: { lon: '105.166672', lat: '10.5' },
+      name: 'An Giang', coord: { lon: '105.166672', lat: '10.5' },
    },
    'Cần Thơ' : {
-      name: 'Cần Thơ', sub_area: 'Đồng bằng sông Cửu Long', area: 'Nam Bộ', coord: { lon: '105.6667', lat: '9.8333' },
+      name: 'Cần Thơ', coord: { lon: '105.6667', lat: '9.8333' },
+   },
+   'Trà Vinh' : {
+      name: 'Trà Vinh', coord: { lon: '106.344167', lat: '9.9525' },
+   },
+   'Bạc Liêu' : {
+      name: 'Bạc Liêu', coord: { lon: '105.493469', lat: '9.312214' },
    },
    'Cà Mau' : {
-      name: 'Cà Mau', sub_area: 'Đồng bằng sông Cửu Long', area: 'Nam Bộ', coord: { lon: '105.15', lat: '9.1769' },
+      name: 'Cà Mau', coord: { lon: '105.15', lat: '9.1769' },
    },
 
    // ĐỊA ĐIỂM DU LỊCH
    // BẮC BỘ
    // Đồng bằng sông Hồng
    'Đại Lải': {
-      name: 'Đại Lải', inside: 'Vĩnh Phúc', coord: { lon: '105.714722', lat: '21.325' },
+      name: 'Đại Lải', coord: { lon: '105.714722', lat: '21.325' },
    },
    'Tam Đảo': {
-      name: 'Tam Đảo', inside: 'Vĩnh Phúc', coord: { lon: '105.616667', lat: '21.393611' },
+      name: 'Tam Đảo', coord: { lon: '105.616667', lat: '21.393611' },
    },
    'Cát Bà': {
-      name: 'Cát Bà', inside: 'Hải Phòng', coord: { lon: '107.057778', lat: '20.723889' },
+      name: 'Cát Bà', coord: { lon: '107.057778', lat: '20.723889' },
    },
    'Đồ Sơn': {
-      name: 'Đồ Sơn', inside: 'Hải Phòng', coord: { lon: '106.789444', lat: '20.713611' },
+      name: 'Đồ Sơn', coord: { lon: '106.789444', lat: '20.713611' },
    },
    'Tràng An': {
-      name: 'Tràng An', inside: 'Ninh Bình', coord: { lon: '105.896389', lat: '20.256667' },
+      name: 'Tràng An', coord: { lon: '105.896389', lat: '20.256667' },
    },
    'Hoa Lư': {
-      name: 'Hoa Lư', inside: 'Ninh Bình', coord: { lon: '105.916944', lat: '20.25' },
+      name: 'Hoa Lư', coord: { lon: '105.916944', lat: '20.25' },
    },
    // Tây Bắc Bộ
    'Sa Pa': {
-      name: 'Sa Pa', inside: 'Lào Cai', coord: { lon: '103.841944', lat: '22.335556' },
+      name: 'Sa Pa', coord: { lon: '103.841944', lat: '22.335556' },
    },
    'Ô Quy Hồ': {
-      name: 'Ô Quy Hồ', inside: 'Lai Châu', coord: { lon: '103.763333', lat: '22.353889' },
+      name: 'Ô Quy Hồ', coord: { lon: '103.763333', lat: '22.353889' },
    },
    'Fanxipan': {
-      name: 'Fanxipan', inside: 'Lào Cai', coord: { lon: '103.775', lat: '22.303333' },
+      name: 'Fanxipan', coord: { lon: '103.775', lat: '22.303333' },
    },
    'Mù Cang Chải': {
-      name: 'Mù Cang Chải', inside: 'Yên Bái', coord: { lon: '104.089222', lat: '21.850915' },
+      name: 'Mù Cang Chải', coord: { lon: '104.089222', lat: '21.850915' },
    },
    'Tà Xùa': {
-      name: 'Tà Xùa', inside: 'Sơn La', coord: { lon: '104.490278', lat: '21.326944' },
+      name: 'Tà Xùa', coord: { lon: '104.490278', lat: '21.326944' },
    },
    'Mai Châu': {
-      name: 'Mai Châu', inside: 'Hòa Bình', coord: { lon: '105.005278', lat: '20.671667' },
+      name: 'Mai Châu', coord: { lon: '105.005278', lat: '20.671667' },
    },
    // Đông Bắc Bộ
    'Mã Pí Lèng': {
-      name: 'Mã Pí Lèng', inside: 'Hà Giang', coord: { lon: '105.410942', lat: '23.240808' },
+      name: 'Mã Pí Lèng', coord: { lon: '105.410942', lat: '23.240808' },
    },
    'Bản Giốc': {
-      name: 'Bản Giốc', inside: 'Cao Bằng', coord: { lon: '106.722501', lat: '22.855897' },
+      name: 'Bản Giốc', coord: { lon: '106.722501', lat: '22.855897' },
    },
    'Hồ Ba Bể': {
-      name: 'Hồ Ba Bể', inside: 'Bắc Kạn', coord: { lon: '105.616667', lat: '22.416667' },
+      name: 'Hồ Ba Bể', coord: { lon: '105.616667', lat: '22.416667' },
    },
    'Yên Tử': {
-      name: 'Yên Tử', inside: 'Quảng Ninh', coord: { lon: '106.716667', lat: '21.083333' },
+      name: 'Yên Tử', coord: { lon: '106.716667', lat: '21.083333' },
    },
    'Hạ Long': {
-      name: 'Hạ Long', inside: 'Quảng Ninh', coord: { lon: '107.089722', lat: '20.873333' },
+      name: 'Hạ Long', coord: { lon: '107.089722', lat: '20.873333' },
    },
    'Cô Tô': {
-      name: 'Cô Tô', inside: 'Quảng Ninh', coord: { lon: '107.698056', lat: '20.947222' },
+      name: 'Cô Tô', coord: { lon: '107.698056', lat: '20.947222' },
    },
 
    // TRUNG BỘ
    // Bắc Trung Bộ
    'Sầm Sơn': {
-      name: 'Sầm Sơn', inside: 'Thanh Hóa', coord: { lon: '105.887778', lat: '19.707778' },
+      name: 'Sầm Sơn', coord: { lon: '105.887778', lat: '19.707778' },
    },
    'Cửa Lò': {
-      name: 'Cửa Lò', inside: 'Nghệ An', coord: { lon: '105.73', lat: '18.72' },
+      name: 'Cửa Lò', coord: { lon: '105.73', lat: '18.72' },
    },
    'Bãi Lữ': {
-      name: 'Bãi Lữ', inside: 'Nghệ An', coord: { lon: '105.6', lat: '18.8' },
+      name: 'Bãi Lữ', coord: { lon: '105.6', lat: '18.8' },
    },
    'Phong Nha - Kẻ Bàng': {
-      name: 'Phong Nha - Kẻ Bàng', inside: 'Quảng Bình', coord: { lon: '106.15125', lat: '17.537222' },
+      name: 'Phong Nha - Kẻ Bàng', coord: { lon: '106.15125', lat: '17.537222' },
    },
    'Sơn Đoòng': {
-      name: 'Sơn Đoòng', inside: 'Quảng Bình', coord: { lon: '106.2875', lat: '17.456944' },
+      name: 'Sơn Đoòng', coord: { lon: '106.2875', lat: '17.456944' },
    },
    'Lăng Cô': {
-      name: 'Lăng Cô', inside: 'Thừa Thiên - Huế', coord: { lon: '108.0836', lat: '16.23' },
+      name: 'Lăng Cô', coord: { lon: '108.0836', lat: '16.23' },
    },
    // Duyên hải Nam Trung Bộ
    'Bà Nà': {
-      name: 'Bà Nà', inside: 'Đà Nẵng', coord: { lon: '107.9942', lat: '15.9957' },
+      name: 'Bà Nà', coord: { lon: '107.9942', lat: '15.9957' },
    },
    'Mỹ Sơn': {
-      name: 'Mỹ Sơn', inside: 'Quảng Nam', coord: { lon: '108.116667', lat: '15.766667' },
+      name: 'Mỹ Sơn', coord: { lon: '108.116667', lat: '15.766667' },
    },
    'Hội An': {
-      name: 'Hội An', inside: 'Quảng Nam', coord: { lon: '108.320556', lat: '15.880833' },
+      name: 'Hội An', coord: { lon: '108.320556', lat: '15.880833' },
    },
    'Nha Trang': {
-      name: 'Nha Trang', inside: 'Khánh Hòa', coord: { lon: '109.196389', lat: '12.256111' },
+      name: 'Nha Trang', coord: { lon: '109.196389', lat: '12.256111' },
    },
    'Lý Sơn': {
-      name: 'Lý Sơn', inside: 'Quảng Ngãi', coord: { lon: '109.1175', lat: '15.380833' },
+      name: 'Lý Sơn', coord: { lon: '109.1175', lat: '15.380833' },
    },
    'Bãi Xép': {
-      name: 'Bãi Xép', inside: 'Phú Yên', coord: { lon: '109.255278', lat: '13.291111' },
+      name: 'Bãi Xép', coord: { lon: '109.255278', lat: '13.291111' },
    },
    'Mũi Né': {
-      name: 'Mũi Né', inside: 'Bình Thuận', coord: { lon: '108.283333', lat: '10.933333' },
+      name: 'Mũi Né', coord: { lon: '108.283333', lat: '10.933333' },
    },
    // Tây Nguyên
    'Biển Hồ': {
-      name: 'Biển Hồ', inside: 'Gia Lai', coord: { lon: '108.014444', lat: '14.059444' },
+      name: 'Biển Hồ', coord: { lon: '108.014444', lat: '14.059444' },
    },
    'Đà Lạt': {
-      name: 'Đà Lạt', inside: 'Lâm Đồng', coord: { lon: '108.436866', lat: '11.940381' },
+      name: 'Đà Lạt', coord: { lon: '108.436866', lat: '11.940381' },
    },
    'Tà Năng': {
-      name: 'Tà Năng', inside: 'Lâm Đồng', coord: { lon: '108.444018', lat: '11.567233' },
+      name: 'Tà Năng', coord: { lon: '108.444018', lat: '11.567233' },
    },
 
    // NAM BỘ
    // Đông Nam Bộ
    'Núi Bà Đen': {
-      name: 'Núi Bà Đen', inside: 'Tây Ninh', coord: { lon: '106.166667', lat: '11.366667' },
+      name: 'Núi Bà Đen', coord: { lon: '106.166667', lat: '11.366667' },
    },
    'Giang Điền': {
-      name: 'Giang Điền', inside: 'Đồng Nai', coord: { lon: '106.983357', lat: '10.921673' },
+      name: 'Giang Điền', coord: { lon: '106.983357', lat: '10.921673' },
    },
    'Vũng Tàu': {
-      name: 'Vũng Tàu', inside: 'Bà Rịa - Vũng Tàu', coord: { lon: '107.095251', lat: '10.343569' },
+      name: 'Vũng Tàu', coord: { lon: '107.095251', lat: '10.343569' },
    },
    // Đồng bằng sông Cửu Long
    'Đồng Sen Tháp Mười': {
-      name: 'Đồng Sen Tháp Mười', inside: 'Đồng Tháp', coord: { lon: '105.848651', lat: '10.520498' },
+      name: 'Đồng Sen Tháp Mười', coord: { lon: '105.848651', lat: '10.520498' },
    },
    'Cái Bè': {
-      name: 'Cái Bè', inside: 'Tiền Giang', coord: { lon: '105.933611', lat: '10.405833' },
+      name: 'Cái Bè', coord: { lon: '105.933611', lat: '10.405833' },
    },
    'Thất Sơn': {
-      name: 'Thất Sơn', inside: 'An Giang', coord: { lon: '104.973056', lat: '10.540833' },
+      name: 'Thất Sơn', coord: { lon: '104.973056', lat: '10.540833' },
    },
    'Hòn Đá Bạc': {
-      name: 'Hòn Đá Bạc', inside: 'Cà Mau', coord: { lon: '104.800278', lat: '9.179166' },
+      name: 'Hòn Đá Bạc', coord: { lon: '104.800278', lat: '9.179166' },
    },
    'Phú Quốc': {
-      name: 'Phú Quốc', inside: 'Kiên Giang', coord: { lon: '104.010467', lat: '10.287154' },
+      name: 'Phú Quốc', coord: { lon: '104.010467', lat: '10.287154' },
    },
 };
