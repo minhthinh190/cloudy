@@ -1,8 +1,24 @@
-.App {
+body {
    box-sizing: border-box;
-   text-align: left;
    background-color: #ebecf0;
-   padding: 0 0 50px 0;
+}
+
+.App {
+   text-align: left;
+}
+
+.content-section {
+   display: flex;
+   justify-content: center;
+   padding: 50px 0 70px 0;
+}
+
+.main-content {
+   width: fit-content;
+}
+
+.sub-content {
+   margin-left: 30px;
 }
 
 /* Navbar */
@@ -11,7 +27,6 @@
    align-items: center;
    position: relative;
    background-color: white;
-   margin-bottom: 50px;
    padding: 20px 50px;
    box-shadow: 0 1.5px 3px lightgray;
 }
@@ -112,12 +127,10 @@
    cursor: pointer;
    text-decoration: underline;
 }
-
 /* */
 
 .current-container {
    width: 700px;
-   margin: 0 auto;
    text-align: center;
    background-color: white;
    padding: 50px 0;
@@ -177,25 +190,24 @@ td {
 
 .forecast-container {
    width: 700px;
-   margin: 50px auto;
+   margin-top: 50px;
    padding: 0;
 }
 
 .section-title {
    margin: 0 0 20px 0;
+   color: #323232;
 }
 
 .forecast-card-container {
    display: flex;
-   justify-content: center;
-   width: fit-content;
-   margin: 0 auto;
+   justify-content: space-between;
+   width: 100%;
 }
 
 .forecast-card {
    border-radius: 15px;
    width: 60px;
-   margin: 0 10px;
    padding: 0 30px;
    text-align: center;
    background-color: white;
@@ -255,3 +267,42 @@ span {
    font-weight: bold;
    color: darkgrey;
 }
+
+.air-quality-container {
+   border-radius: 10px;
+   padding: 20px 35px 15px 35px;
+   background-color: white;
+   box-shadow: 0 1.5px 3px lightgray;
+}
+
+.air-quality-title {
+   margin: 0;
+   font-size: 20px;
+   font-weight: bold;
+   color: #323232;
+}
+
+.air-quality-score {
+   margin: 10px 0 0 0;
+   font-size: 26px;
+   font-weight: bold;
+   text-align: center;
+}
+
+.air-quality-level {
+   list-style-type: none;
+   padding: 0;
+   font-size: 17px;
+   font-weight: bold;
+}
+
+.air-quality-description {
+   padding: 0 15px;
+   color: gray;
+}
+
+.quality-good { color: limegreen; }
+.quality-fair { color: gold; }
+.quality-moderate { color: orange; }
+.quality-poor { color: crimson; }
+.quality-very-poor { color: purple; }
