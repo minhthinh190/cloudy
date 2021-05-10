@@ -32,7 +32,6 @@ class HourlyForecast extends React.Component {
          const location = province[`${this.props.location}`];
 
          getHourlyWeather(location.coord.lat, location.coord.lon).then(val => {
-            console.log(val);
             this.setState({
                location: this.props.location,
                weatherData: val.hourly,
