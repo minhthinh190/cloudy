@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 
-import Navbar from './components/Navbar.js';
-import CurrentWeather from './components/CurrentWeather.js';
-import HourlyForecast from './components/HourlyForecast.js';
-import DailyForecast from './components/DailyForecast.js';
+import Navbar from './components/Navbar';
+import CurrentWeather from './components/CurrentWeather';
+import HourlyForecast from './components/HourlyForecast';
+import DailyForecast from './components/DailyForecast';
+import AirQuality from './components/AirQuality';
 
 class App extends React.Component {
    constructor(props) {
@@ -21,10 +22,17 @@ class App extends React.Component {
    render() {
       return (
          <div className="App">
-               <Navbar onOptionChange={this.handleLocationChange}/>
-               <CurrentWeather location={this.state.location}/>
-               <HourlyForecast location={this.state.location}/>
-               <DailyForecast location={this.state.location}/>
+            <Navbar onOptionChange={this.handleLocationChange}/>
+            <div className="content-section">
+               <div className="main-content">
+                  <CurrentWeather location={this.state.location}/>
+                  <HourlyForecast location={this.state.location}/>
+                  <DailyForecast location={this.state.location}/>
+               </div>
+               <div className="sub-content">
+                  <AirQuality location={this.state.location}/>
+               </div>
+            </div>
          </div>
       );
    }
