@@ -4,7 +4,7 @@ Cloudy is a weather forecast website for geographical areas in the Vietnam terri
 
 ## Usage
 
-You can view the live demo of the application [here](https://minhthinh190.github.io/cloudy/).
+You can view the live demo of the website [here](https://minhthinh190.github.io/cloudy/).
 
 <div>
    <img src="public/screenshot_2.png">
