@@ -310,11 +310,16 @@ span {
 
 .pollutant {
 	border-radius: 10px;
-   margin-top: 20px;
-	padding: 20px;
+   margin-top: 16px;
+	padding: 16px 20px;
 	background-color: white;
    color: #323232;
 	box-shadow: 0 1.5px 3px gainsboro;
+}
+
+.pollutant-section-title {
+   margin: 20px 0 0px 0;
+   color: #323232;
 }
 
 .pollutant-detail {
@@ -326,7 +331,6 @@ span {
 }
 
 .pollutant-name {
-
 	font-weight: bold;
 }
 

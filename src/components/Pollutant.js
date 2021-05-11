@@ -98,6 +98,7 @@ class Pollutant extends React.Component {
 
          return (
             <div>
+               <h3 className="pollutant-section-title">Các chất gây ô nhiễm</h3>
                {
                   pollutants.slice(0, 3).map(([pollutant, value]) => {
                      return (
