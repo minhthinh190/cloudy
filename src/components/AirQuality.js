@@ -71,7 +71,7 @@ class AirQuality extends React.Component {
          return <div></div>;
       }
       else {
-         return(
+         return (
             <div className="air-quality-container">
                <p className="air-quality-title">Chất lượng không khí</p>
                <p className={"air-quality-score quality-" + this.classifyAirQualityColor(this.state.airQuality.main.aqi)}>
