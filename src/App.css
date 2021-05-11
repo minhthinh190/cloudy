@@ -290,6 +290,7 @@ span {
 }
 
 .air-quality-level {
+   color: #323232;
    list-style-type: none;
    padding: 0;
    font-size: 17px;
@@ -306,3 +307,33 @@ span {
 .quality-moderate { color: orange; }
 .quality-poor { color: crimson; }
 .quality-very-poor { color: purple; }
+
+.pollutant {
+	border-radius: 10px;
+   margin-top: 20px;
+	padding: 20px;
+	background-color: white;
+   color: #323232;
+	box-shadow: 0 1.5px 3px gainsboro;
+}
+
+.pollutant-detail {
+	height: 30px;
+   display: flex;
+	justify-content: space-between;
+	align-items: center;
+   background-color: white;
+}
+
+.pollutant-name {
+
+	font-weight: bold;
+}
+
+.pollutant-value {
+   font-weight: bold;
+}
+
+.pollutant-unit {
+   color: gray;
+}
