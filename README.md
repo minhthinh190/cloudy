@@ -7,7 +7,7 @@ Cloudy is a weather forecast application for Vietnam's territory.
 You can view the live demo of the application [here](https://minhthinh190.github.io/cloudy/).
 
 <div>
-   <img src="public/screenshot.png">
+   <img src="public/screenshot_2.png">
 </div>
 
 <p align="center">
@@ -16,10 +16,12 @@ You can view the live demo of the application [here](https://minhthinh190.github
 
 ## Features
 
-- Local current weather
-- Local hourly weather forecasts
-- Local daily weather forecasts for 5 days
-- Famous travel location's weather forecasts
+- Real-time local weather
+- Hourly local weather forecasts
+- Daily local weather forecasts for 5 days
+- Real-time & Forecast weather of famous travel locations
+- Real-time local air pollution data
+- Detail data of key air pollutants
 
 ## Built With
 
