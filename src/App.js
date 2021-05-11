@@ -6,6 +6,7 @@ import CurrentWeather from './components/CurrentWeather';
 import HourlyForecast from './components/HourlyForecast';
 import DailyForecast from './components/DailyForecast';
 import AirQuality from './components/AirQuality';
+import Pollutant from './components/Pollutant';
 
 class App extends React.Component {
    constructor(props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
                </div>
                <div className="sub-content">
                   <AirQuality location={this.state.location}/>
+                  <Pollutant location={this.state.location}/>
                </div>
             </div>
          </div>
