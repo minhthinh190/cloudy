@@ -1,6 +1,6 @@
 # Cloudy
 
-Cloudy is a weather forecast application for Vietnam's territory.
+Cloudy is a weather forecast website for geographical areas in the Vietnam territory.
 
 ## Usage
 
