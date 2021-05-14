@@ -12,16 +12,18 @@ class HourlyForecast extends React.Component {
       super(props);
       this.state = {
          location: this.props.location,
+         isLoading: true,
          weatherData: [],
       };
    }
 
    componentDidMount() {
-      const location = LOCATION[`${this.state.location}`];
+      const location = LOCATION[this.state.location];
 
       getHourlyWeather(location.coord.lat, location.coord.lon).then((val) => {
          this.setState({
                location: this.props.location,
+               isLoading: false,
                weatherData: val.hourly,
          });
       });
@@ -29,11 +31,12 @@ class HourlyForecast extends React.Component {
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = LOCATION[`${this.props.location}`];
+         const location = LOCATION[this.props.location];
 
          getHourlyWeather(location.coord.lat, location.coord.lon).then((val) => {
             this.setState({
                location: this.props.location,
+               isLoading: false,
                weatherData: val.hourly,
             });
          });
@@ -42,6 +45,9 @@ class HourlyForecast extends React.Component {
 
    render() {
       return (
+         this.state.isLoading ?
+         <div></div>
+         :
          <div className="forecast-container">
                <h2 className="section-title">Dự báo thời tiết hôm nay</h2>
                <div className="forecast-card-container">

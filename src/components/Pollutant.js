@@ -10,7 +10,7 @@ class Pollutant extends React.Component {
          location: this.props.location,
          isLoading: true,
          pollutants: {},
-         allowedConcentration: {
+         concentrationLimit: {
             pm10: '50',
             pm2_5: '25',
             so2: '50',
@@ -22,7 +22,7 @@ class Pollutant extends React.Component {
    }
 
    componentDidMount() {
-      const location = LOCATION[`${this.state.location}`];
+      const location = LOCATION[this.state.location];
 
       getCurrentAirQuality(location.coord.lat, location.coord.lon).then((data) => {
          this.setState({
@@ -35,7 +35,7 @@ class Pollutant extends React.Component {
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = LOCATION[`${this.props.location}`];
+         const location = LOCATION[this.props.location];
 
          getCurrentAirQuality(location.coord.lat, location.coord.lon).then((data) => {
             this.setState({
@@ -48,48 +48,56 @@ class Pollutant extends React.Component {
    }
 
    makePollutantNameUppercase(pollutant) {
-      let pollutantUppercase = '';
+      const uppercasePollutant = {
+         pm10: 'PM10',
+         pm2_5: 'PM2.5',
+         so2: 'SO2',
+      };
 
-      switch (pollutant) {
-         case 'pm10':
-            pollutantUppercase = 'PM10';
-            break;
-         case 'pm2_5':
-            pollutantUppercase = 'PM2.5';
-            break;
-         case 'so2':
-            pollutantUppercase = 'SO2';
-            break;
-         default:
-            pollutantUppercase = pollutant;
-      }
+      return uppercasePollutant[pollutant];
+   }
 
-      return pollutantUppercase;
+   between(value, min, max) {
+      return (value >= min && value < max);
    }
 
    hightlightPollutantValue(pollutant, value) {
-      let color = 'good';
+      let level = '';
 
-      if (pollutant === 'pm10' && value >= 35) color = 'moderate';
-      if (pollutant === 'pm10' && value >= 50) color = 'poor';
-      if (pollutant === 'pm10' && value >= 100) color = 'very-poor';
+      const pollutionLevel = {
+         pm10: [
+            { level: 'good', min: 0, max: 35 },
+            { level: 'moderate', min: 35, max: 50 },
+            { level: 'poor', min: 50, max: 100 },
+            { level: 'very-poor', min: 100, max: Infinity },
+         ],
+         pm2_5: [
+            { level: 'good', min: 0, max: 20 },
+            { level: 'moderate', min: 20, max: 25 },
+            { level: 'poor', min: 25, max: 50 },
+            { level: 'very-poor', min: 50, max: Infinity },
+         ],
+         so2: [
+            { level: 'good', min: 0, max: 35 },
+            { level: 'moderate', min: 35, max: 50 },
+            { level: 'poor', min: 50, max: 100 },
+            { level: 'very-poor', min: 100, max: Infinity },
+         ],
+      };
+      
+      pollutionLevel[pollutant].forEach(element => {
+         if (this.between(value, element.min, element.max)) {
+            level = element.level;
+         }
+      });
 
-      if (pollutant === 'pm2_5' && value >= 20) color = 'moderate';
-      if (pollutant === 'pm2_5' && value >= 25) color = 'poor';
-      if (pollutant === 'pm2_5' && value >= 50) color = 'very-poor';
-
-      if (pollutant === 'so2' && value >= 35) color = 'moderate';
-      if (pollutant === 'so2' && value >= 50) color = 'poor';
-      if (pollutant === 'so2' && value >= 100) color = 'very-poor';
-
-      return color;
+      return level;
    }
 
    render() {
       if (this.state.isLoading) {
          return <div></div>;
-      }
-      else {
+      } else {
          const pollutants = Object.entries(this.state.pollutants.components);
          
          // Remove unnecessary pollutants
@@ -115,7 +123,7 @@ class Pollutant extends React.Component {
                            <div className="pollutant-detail">
                               <p className="pollutant-unit">Giới hạn cho phép</p>
                               <p>
-                                 <span className="pollutant-value">{this.state.allowedConcentration[pollutant]}</span> 
+                                 <span className="pollutant-value">{this.state.concentrationLimit[pollutant]}</span> 
                                  <span className="pollutant-unit"> μg/m3</span>
                               </p>
                            </div>

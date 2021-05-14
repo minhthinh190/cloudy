@@ -1,4 +1,7 @@
-const API_KEY = '373a59a53a6e12d6492b8823e6963f5f';
+const API_KEY = [
+   '373a59a53a6e12d6492b8823e6963f5f',
+   'dcc848b9f88fd641462e8170356f3877',
+];
 
 const FORECAST_WEATHER =  new URL("https://api.openweathermap.org/data/2.5/onecall?");
 const CURRENT_WEATHER = new URL("https://api.openweathermap.org/data/2.5/onecall?");
@@ -8,9 +11,10 @@ const AIR_QUALITY = new URL("https://api.openweathermap.org/data/2.5/air_polluti
 export const WEATHER_ICON = new URL("https://openweathermap.org/img/wn/");
 export const WEATHER_ICON_FORMAT = "@2x.png";
 
+// Fetch functions
 export async function getCurrentWeather(lat, lon) {
    const params = {
-      appid: API_KEY,
+      appid: API_KEY[1],
       lat: lat,
       lon: lon,
       exclude: 'minutely,hourly,daily',
@@ -27,7 +31,7 @@ export async function getCurrentWeather(lat, lon) {
 
 export async function getHourlyWeather(lat,lon) {
    const params = {
-      appid: API_KEY,
+      appid: API_KEY[1],
       lat: lat,
       lon: lon,
       exclude: 'current,minutely,daily',
@@ -44,7 +48,7 @@ export async function getHourlyWeather(lat,lon) {
 
 export async function getDailyWeather(lat, lon) {
    const params = {
-      appid: API_KEY,
+      appid: API_KEY[1],
       lat: lat,
       lon: lon,
       exclude: 'current,minutely,hourly',
@@ -61,7 +65,7 @@ export async function getDailyWeather(lat, lon) {
 
 export async function getCurrentAirQuality(lat, lon) {
    const params = {
-      appid: API_KEY,
+      appid: API_KEY[1],
       lat: lat,
       lon: lon,
    };

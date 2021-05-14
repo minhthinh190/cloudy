@@ -1,85 +1,64 @@
 import React from 'react';
-import { AREA } from '../services/location';
 
 function LocationList(props) {
-   const handleLocationSelect = (e) => {
-      props.onLocationChange(e.target.value);
+   const handleLocationSelect = (event) => {
+      props.onLocationChange(event.target.value);
    };
 
    return (
       <div className="dropdown-content">
-            <div className="dropdown-area-container">
-               <h2 className="area-name">{AREA[0].name}</h2>
-               {
-                  AREA[0].sub_area.map((subArea) => {
-                        let locationList = subArea.location.map((location) => {
-                           return (
-                              <button 
-                                 className="dropdown-option" 
-                                 key={location.title} 
-                                 value={location.title} 
-                                 onClick={handleLocationSelect}
-                              >
-                                 {location.title}
-                              </button>
-                           );
-                        });
-                        locationList.unshift(
-                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
-                        );
-                        
-                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
-                  })
-               }
-            </div>
-            <div className="dropdown-area-container">
-               <h2 className="area-name">{AREA[1].name}</h2>
-               {
-                  AREA[1].sub_area.map((subArea) => {
-                        let locationList = subArea.location.map((location) => {
-                           return (
-                              <button 
-                                 className="dropdown-option" 
-                                 key={location.title} 
-                                 value={location.title} 
-                                 onClick={handleLocationSelect}
-                              >
-                                 {location.title}
-                              </button>
-                           );
-                        });
-                        locationList.unshift(
-                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
-                        );
-                        
-                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
-                  })
-               }
-            </div>
-            <div className="dropdown-area-container">
-               <h2 className="area-name">{AREA[2].name}</h2>
-               {
-                  AREA[2].sub_area.map((subArea) => {
-                        let locationList = subArea.location.map((location) => {
-                           return (
-                              <button 
-                                 className="dropdown-option" 
-                                 key={location.title} 
-                                 value={location.title} 
-                                 onClick={handleLocationSelect}
-                              >
-                                 {location.title}
-                              </button>
-                           );
-                        });
-                        locationList.unshift(
-                           <h3 className="subarea-name" key={subArea.name}>{subArea.name}</h3>
-                        );
-                        
-                        return <div className="dropdown-subarea-container" key={subArea.name}>{locationList}</div>;
-                  })
-               }
-            </div>
+         {
+            props.areas.map((area) => {
+               return (
+                  <Area 
+                     area={area} 
+                     handleLocationSelect={handleLocationSelect}
+                     key={area.name}   
+                  />
+               );
+            })
+         }
+      </div>
+   );
+}
+
+function Area(props) {
+   return (
+      <div className="dropdown-area-container">
+         <h2 className="area-name">{props.area.name}</h2>
+         {
+            props.area.sub_area.map((subArea) => {
+               return (
+                  <SubArea 
+                     subArea={subArea} 
+                     handleLocationSelect={props.handleLocationSelect} 
+                     key={subArea.name}
+                  />
+               );
+            })
+         }
+      </div>
+   );
+}
+
+function SubArea(props) {
+   return (
+      <div className="dropdown-subarea-container">
+         <h3 className="subarea-name">{props.subArea.name}</h3>
+         {
+            props.subArea.location.map((location) => {
+               return (
+                  <button
+                     className="dropdown-option"
+                     key={location.title}
+                     value={location.title}
+                     onClick={props.handleLocationSelect}
+                  >
+                     {location.title}
+                  </button>
+               );
+            })
+         }
       </div>
    );
 }

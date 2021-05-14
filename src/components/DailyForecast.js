@@ -10,12 +10,13 @@ class DailyForecast extends React.Component {
       super(props);
       this.state = {
          location: this.props.location,
+         isLoading: true,
          weatherData: [],
       };
    }
 
    componentDidMount() {
-      const location = LOCATION[`${this.state.location}`];
+      const location = LOCATION[this.state.location];
 
       getDailyWeather(location.coord.lat, location.coord.lon).then((val) => {
          // remove today weather from the daily forecast list
@@ -23,6 +24,7 @@ class DailyForecast extends React.Component {
 
          this.setState({
                location: this.props.location,
+               isLoading: false,
                weatherData: val.daily,
          });
       });
@@ -30,7 +32,7 @@ class DailyForecast extends React.Component {
 
    componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-         const location = LOCATION[`${this.props.location}`];
+         const location = LOCATION[this.props.location];
 
          getDailyWeather(location.coord.lat, location.coord.lon).then((val) => {
                // remove today weather from the daily forecast list
@@ -38,6 +40,7 @@ class DailyForecast extends React.Component {
 
                this.setState({
                   location: this.props.location,
+                  isLoading: false,
                   weatherData: val.daily,
                });
          });
@@ -46,26 +49,29 @@ class DailyForecast extends React.Component {
 
    render() {
       return (
+         this.state.isLoading ?
+         <div></div>
+         :
          <div className="forecast-container">
-               <h2 className="section-title">Dự báo thời tiết 5 ngày tới</h2>
-               <div className="forecast-card-container">
-                  {
-                     this.state.weatherData.slice(0, 5).map(element => {
-                           return (
-                              <div key={element.dt} className="forecast-card">
-                                 <p className="date">{timestampToDate(element.dt)}</p>
-                                 <p className="max-temp">{Math.round(element.temp.max)} <span>°</span></p>
-                                 <p className="min-temp">{Math.round(element.temp.min)} <span>°</span></p>
-                                 <img 
-                                    className="forecast-weather-icon"
-                                    src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
-                                    alt="weather icon"
-                                 />
-                              </div>
-                           );
-                     })
-                  }
-               </div>
+            <h2 className="section-title">Dự báo thời tiết 5 ngày tới</h2>
+            <div className="forecast-card-container">
+               {
+                  this.state.weatherData.slice(0, 5).map(element => {
+                        return (
+                           <div key={element.dt} className="forecast-card">
+                              <p className="date">{timestampToDate(element.dt)}</p>
+                              <p className="max-temp">{Math.round(element.temp.max)} <span>°</span></p>
+                              <p className="min-temp">{Math.round(element.temp.min)} <span>°</span></p>
+                              <img 
+                                 className="forecast-weather-icon"
+                                 src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
+                                 alt="weather icon"
+                              />
+                           </div>
+                        );
+                  })
+               }
+            </div>
          </div>
       );
    }

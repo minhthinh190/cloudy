@@ -1,6 +1,7 @@
 import React from 'react';
+
 import LocationList from './LocationList';
-import TravelLocationList from './TravelLocationList';
+import { AREAS, TRAVEL_AREAS } from '../services/location';
 
 function Navbar(props) {
    return (
@@ -8,11 +9,17 @@ function Navbar(props) {
             <div className="option-container">
                <a className="dropdown" href="#!">
                   Tỉnh / Thành phố
-                  <LocationList onLocationChange={props.onOptionChange}/>
+                  <LocationList 
+                     areas={AREAS}
+                     onLocationChange={props.onOptionChange}
+                  />
                </a>
                <a className="dropdown" href="#!">
                   Địa điểm du lịch
-                  <TravelLocationList onLocationChange={props.onOptionChange}/>
+                  <LocationList 
+                     areas={TRAVEL_AREAS}
+                     onLocationChange={props.onOptionChange}
+                  />
                </a>
             </div>
             <div className="appname">
