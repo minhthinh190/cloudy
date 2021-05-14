@@ -1,4 +1,4 @@
-export const AREA = [
+export const AREAS = [
    {
       name: 'Bắc Bộ',
       sub_area: [
@@ -104,7 +104,7 @@ export const AREA = [
    },
 ];
 
-export const TRAVEL_AREA = [
+export const TRAVEL_AREAS = [
    {
       name: 'Bắc Bộ',
       sub_area: [
