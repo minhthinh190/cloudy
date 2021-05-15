@@ -44,30 +44,31 @@ class HourlyForecast extends React.Component {
    }
 
    render() {
+      const { isLoading, weatherData } = this.state;
+
       return (
-         this.state.isLoading ?
-         <div></div>
-         :
+         !isLoading
+         &&
          <div className="forecast-container">
                <h2 className="section-title">Dự báo thời tiết hôm nay</h2>
                <div className="forecast-card-container">
                   {
-                     this.state.weatherData.slice(0, 5).map(element => {
-                           return (
-                              <div key={element.dt} className="forecast-card">
-                                 <p className="time">{timestampToTime(element.dt)}</p>
-                                 <p className="max-temp">{Math.round(element.temp)} <span>°</span></p>
-                                 <img 
-                                    className="forecast-weather-icon"
-                                    src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
-                                    alt="weather icon"
-                                 />
-                                 <div className="forecast-uv-container">
-                                    <img className="forecast-uv-icon" src={uv_icon} alt="uv icon"/>
-                                    <p className="forecast-uv-index">{element.uvi}</p>
-                                 </div>
+                     weatherData.slice(0, 5).map(element => {
+                        return (
+                           <div key={element.dt} className="forecast-card">
+                              <p className="time">{timestampToTime(element.dt)}</p>
+                              <p className="max-temp">{Math.round(element.temp)} <span>°</span></p>
+                              <img 
+                                 className="forecast-weather-icon"
+                                 src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
+                                 alt="weather icon"
+                              />
+                              <div className="forecast-uv-container">
+                                 <img className="forecast-uv-icon" src={uv_icon} alt="uv icon"/>
+                                 <p className="forecast-uv-index">{element.uvi}</p>
                               </div>
-                           );
+                           </div>
+                        );
                      })
                   }
                </div>

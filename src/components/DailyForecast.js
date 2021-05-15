@@ -48,27 +48,28 @@ class DailyForecast extends React.Component {
    }
 
    render() {
+      const { isLoading, weatherData } = this.state;
+
       return (
-         this.state.isLoading ?
-         <div></div>
-         :
+         !isLoading
+         &&
          <div className="forecast-container">
             <h2 className="section-title">Dự báo thời tiết 5 ngày tới</h2>
             <div className="forecast-card-container">
                {
-                  this.state.weatherData.slice(0, 5).map(element => {
-                        return (
-                           <div key={element.dt} className="forecast-card">
-                              <p className="date">{timestampToDate(element.dt)}</p>
-                              <p className="max-temp">{Math.round(element.temp.max)} <span>°</span></p>
-                              <p className="min-temp">{Math.round(element.temp.min)} <span>°</span></p>
-                              <img 
-                                 className="forecast-weather-icon"
-                                 src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
-                                 alt="weather icon"
-                              />
-                           </div>
-                        );
+                  weatherData.slice(0, 5).map(element => {
+                     return (
+                        <div key={element.dt} className="forecast-card">
+                           <p className="date">{timestampToDate(element.dt)}</p>
+                           <p className="max-temp">{Math.round(element.temp.max)} <span>°</span></p>
+                           <p className="min-temp">{Math.round(element.temp.min)} <span>°</span></p>
+                           <img 
+                              className="forecast-weather-icon"
+                              src={WEATHER_ICON + element.weather[0].icon + WEATHER_ICON_FORMAT}
+                              alt="weather icon"
+                           />
+                        </div>
+                     );
                   })
                }
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { getCurrentAirQuality } from '../services/provider';
 import { LOCATION } from '../services/location';
+import { AIR_QUALITY_LEVEL } from '../services/air_quality';
 
 class AirQuality extends React.Component {
    constructor(props) {
@@ -9,10 +10,8 @@ class AirQuality extends React.Component {
       this.state = {
          location: this.props.location,
          isLoading: true,
-         airQuality: {},
+         airQualityData: {},
       };
-
-      this.classifyAirQualityColor = this.classifyAirQualityColor.bind(this);
    }
 
    componentDidMount() {
@@ -22,7 +21,7 @@ class AirQuality extends React.Component {
          this.setState({
             location: this.props.location,
             isLoading: false,
-            airQuality: data.list[0],
+            airQualityData: data.list[0],
          });
       });
    }
@@ -35,50 +34,36 @@ class AirQuality extends React.Component {
             this.setState({
                location: this.props.location,
                isLoading: false,
-               airQuality: data.list[0],
+               airQualityData: data.list[0],
             });
          });
       }
    }
 
-   classifyAirQualityColor(airQualityScore) {
-      const airQualityLevel = {
-         1: 'good',
-         2: 'fair',
-         3: 'moderate',
-         4: 'poor',
-         5: 'very-poor',
-      };
-
-      return airQualityLevel[airQualityScore];
-   }
-
    render() {
+      const { isLoading, airQualityData } = this.state;
+
       return (
-         this.state.isLoading ?
-         <div></div>
-         :
+         !isLoading
+         &&
          <div className="air-quality-container">
             <p className="air-quality-title">Chất lượng không khí</p>
-            <p className={"air-quality-score quality-" + this.classifyAirQualityColor(this.state.airQuality.main.aqi)}>
-               {this.state.airQuality.main.aqi}
+            <p className={"air-quality-score quality-" + AIR_QUALITY_LEVEL[airQualityData.main.aqi].description}>
+               {airQualityData.main.aqi}
             </p>
             <ul className="air-quality-level">
-               <li>
-                  1<span className="air-quality-description">Tốt</span>
-               </li>
-               <li>
-                  2<span className="air-quality-description">Khá tốt</span>
-               </li>
-               <li>
-                  3<span className="air-quality-description">Trung bình</span>
-               </li>
-               <li>
-                  4<span className="air-quality-description">Kém</span>
-               </li>
-               <li>
-                  5<span className="air-quality-description">Rất kém</span>
-               </li>
+               {
+                  Object.values(AIR_QUALITY_LEVEL).map((level) => {
+                     return (
+                        <li key={level.score}>
+                           {level.score}
+                           <span className="air-quality-description">
+                              {level.vietnameseDescription}
+                           </span>
+                        </li>
+                     );
+                  })
+               }
             </ul>
          </div>
       );

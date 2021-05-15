@@ -21,63 +21,28 @@ export function timestampToDate(timestamp) {
 }
 
 export function toVietnamese(description) {
-   let translation = '';
-
-   switch (description) {
+   const translation = {
+      // Clear weather
+      'clear sky': 'Quang mây',
+      
       // Clouds weather
-      case 'few clouds':
-         translation = 'Ít mây';
-         break;
-      case 'scattered clouds':
-         translation = 'Mây rải rác';
-         break;
-      case 'broken clouds':
-         translation = 'Nhiều mây';
-         break;
-      case 'overcast clouds':
-         translation = 'Nhiều mây';
-         break;
+      'few clouds': 'Ít mây',
+      'scatterd clouds': 'Mây rải rác',
+      'broken clouds': 'Nhiều mây',
+      'overcast clouds': 'Nhiều mây',
       
       // Rain weather
-      case 'light rain':
-         translation = 'Mưa nhẹ';
-         break;
-      case 'moderate rain':
-         translation = 'Mưa vừa';
-         break;
-      case 'heavy intensity rain':
-         translation = 'Mưa to';
-         break;
-      case 'very heavy rain':
-         translation = 'Mưa rất to';
-         break;
-      case 'extreme rain':
-         translation = 'Mưa rất to';
-         break;
-      case 'freezing rain':
-         translation = 'Mưa lạnh';
-         break;
-      case 'light intensity shower rain':
-         translation = 'Mưa rào nhẹ';
-         break;
-      case 'shower rain':
-         translation = 'Mưa rào';
-         break;
-      case 'heavy intensity shower rain':
-         translation = 'Mưa to';
-         break;
-      case 'ragged shower rain':
-         translation = 'Mưa rất to';
-         break;
-
-      // Clear weather
-      case 'clear sky':
-         translation = 'Quang mây';
-         break;
-
-      default: 
-         translation = description;
-   }
-
-   return translation;
+      'light rain': 'Mưa nhẹ',
+      'moderate rain': 'Mưa vừa',
+      'heavy intensity rain': 'Mưa to',
+      'very heavy rain': 'Mưa rất to',
+      'extreme rain': 'Mưa rất to',
+      'freezing rain': 'Mưa lạnh',
+      'light intensity shower rain': 'Mưa rào nhẹ',
+      'shower rain': 'Mưa rào',
+      'heavy intensity shower rain': 'Mưa to',
+      'ragged shower rain': 'Mưa rất to',      
+   };
+   
+   return translation[description];
 }

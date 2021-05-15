@@ -50,9 +50,9 @@ function SubArea(props) {
                return (
                   <button
                      className="dropdown-option"
-                     key={location.title}
                      value={location.title}
                      onClick={props.handleLocationSelect}
+                     key={location.title}
                   >
                      {location.title}
                   </button>

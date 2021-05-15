@@ -20,7 +20,6 @@ class CurrentWeather extends React.Component {
 
       getCurrentWeather(location.coord.lat, location.coord.lon).then((data) => {
          this.setState({
-            location: this.props.location,
             isLoading: false,
             weatherData: data.current,
          });
@@ -42,39 +41,40 @@ class CurrentWeather extends React.Component {
    }
 
    render() {
+      const { isLoading, location, weatherData } = this.state;
+
       return (
-         this.state.isLoading ?
-         <div></div>
-         :
+         !isLoading 
+         &&
          <div className="current-container">
             <div className="current-main">
-               <p className="current-location">{this.state.location}</p>
-               <p className="current-temp">{Math.round(this.state.weatherData.temp)} °C</p>
+               <p className="current-location">{location}</p>
+               <p className="current-temp">{Math.round(weatherData.temp)} °C</p>
                <img 
                   className="current-weather-icon"
-                  src={WEATHER_ICON + this.state.weatherData.weather[0].icon + WEATHER_ICON_FORMAT} 
+                  src={WEATHER_ICON + weatherData.weather[0].icon + WEATHER_ICON_FORMAT} 
                   alt="weather icon"
                />
-               <p className="current-weather">{toVietnamese(this.state.weatherData.weather[0].description)}</p>
+               <p className="current-weather">{toVietnamese(weatherData.weather[0].description)}</p>
             </div>
             <div className="current-details">
                <table className="table-details">
                   <tbody>
                      <tr>
                         <td>Nhiệt độ cảm nhận</td>
-                        <td className="detail-val">{Math.round(this.state.weatherData.feels_like)} °C</td>
+                        <td className="detail-val">{Math.round(weatherData.feels_like)} °C</td>
                      </tr>
                      <tr>
                         <td>Độ ẩm</td>
-                        <td className="detail-val">{this.state.weatherData.humidity} %</td>
+                        <td className="detail-val">{weatherData.humidity} %</td>
                      </tr>
                      <tr>
                         <td>Tầm nhìn xa</td>
-                        <td className="detail-val">{this.state.weatherData.visibility / 1000} km</td>
+                        <td className="detail-val">{weatherData.visibility / 1000} km</td>
                      </tr>
                      <tr>
                         <td>Mặt trời mọc</td>
-                        <td className="detail-val">{timestampToTime(this.state.weatherData.sunrise)}</td>
+                        <td className="detail-val">{timestampToTime(weatherData.sunrise)}</td>
                      </tr>
                   </tbody>
                </table>
@@ -82,19 +82,19 @@ class CurrentWeather extends React.Component {
                   <tbody>
                         <tr>
                            <td>Tỉ lệ mây</td>
-                           <td className="detail-val">{this.state.weatherData.clouds} %</td>
+                           <td className="detail-val">{weatherData.clouds} %</td>
                         </tr>
                         <tr>
                            <td>Chỉ số UV</td>
-                           <td className="detail-val">{this.state.weatherData.uvi}</td>
+                           <td className="detail-val">{weatherData.uvi}</td>
                         </tr>
                         <tr>
                            <td>Gió</td>
-                           <td className="detail-val">{Math.round(this.state.weatherData.wind_speed * 3.6)} km/h</td>
+                           <td className="detail-val">{Math.round(weatherData.wind_speed * 3.6)} km/h</td>
                         </tr>
                         <tr>
                            <td>Mặt trời lặn</td>
-                           <td className="detail-val">{timestampToTime(this.state.weatherData.sunset)}</td>
+                           <td className="detail-val">{timestampToTime(weatherData.sunset)}</td>
                         </tr>
                   </tbody>
                </table>

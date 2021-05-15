@@ -2,6 +2,7 @@ import React from 'react';
 
 import { getCurrentAirQuality } from '../services/provider';
 import { LOCATION } from '../services/location';
+import { POLLUTANT, UNNECESSARY_POLLUTANT } from '../services/air_quality';
 
 class Pollutant extends React.Component {
    constructor(props) {
@@ -9,26 +10,23 @@ class Pollutant extends React.Component {
       this.state = {
          location: this.props.location,
          isLoading: true,
-         pollutants: {},
-         concentrationLimit: {
-            pm10: '50',
-            pm2_5: '25',
-            so2: '50',
-         },
+         pollutantData: {},
       };
 
-      this.makePollutantNameUppercase = this.makePollutantNameUppercase.bind(this);
-      this.hightlightPollutantValue = this.hightlightPollutantValue.bind(this);
+      this.removeUnnecessaryPollutant = this.removeUnnecessaryPollutant.bind(this);
+      this.classifyPollutionLevel = this.classifyPollutionLevel.bind(this);
    }
 
    componentDidMount() {
       const location = LOCATION[this.state.location];
 
       getCurrentAirQuality(location.coord.lat, location.coord.lon).then((data) => {
+         data.list[0].components = this.removeUnnecessaryPollutant(data.list[0].components);
+
          this.setState({
             location: this.props.location,
             isLoading: false,
-            pollutants: data.list[0],
+            pollutantData: data.list[0],
          });
       });
    }
@@ -38,55 +36,30 @@ class Pollutant extends React.Component {
          const location = LOCATION[this.props.location];
 
          getCurrentAirQuality(location.coord.lat, location.coord.lon).then((data) => {
+            data.list[0].components = this.removeUnnecessaryPollutant(data.list[0].components);
+            
             this.setState({
                location: this.props.location,
                isLoading: false,
-               pollutants: data.list[0],
+               pollutantData: data.list[0],
             });
          });
       }
    }
 
-   makePollutantNameUppercase(pollutant) {
-      const uppercasePollutant = {
-         pm10: 'PM10',
-         pm2_5: 'PM2.5',
-         so2: 'SO2',
-      };
+   removeUnnecessaryPollutant(pollutantJson) {
+      UNNECESSARY_POLLUTANT.forEach((pollutant) => {
+         delete pollutantJson[pollutant];
+      });
 
-      return uppercasePollutant[pollutant];
+      return pollutantJson;
    }
 
-   between(value, min, max) {
-      return (value >= min && value < max);
-   }
-
-   hightlightPollutantValue(pollutant, value) {
+   classifyPollutionLevel(pollutant, value) {
       let level = '';
-
-      const pollutionLevel = {
-         pm10: [
-            { level: 'good', min: 0, max: 35 },
-            { level: 'moderate', min: 35, max: 50 },
-            { level: 'poor', min: 50, max: 100 },
-            { level: 'very-poor', min: 100, max: Infinity },
-         ],
-         pm2_5: [
-            { level: 'good', min: 0, max: 20 },
-            { level: 'moderate', min: 20, max: 25 },
-            { level: 'poor', min: 25, max: 50 },
-            { level: 'very-poor', min: 50, max: Infinity },
-         ],
-         so2: [
-            { level: 'good', min: 0, max: 35 },
-            { level: 'moderate', min: 35, max: 50 },
-            { level: 'poor', min: 50, max: 100 },
-            { level: 'very-poor', min: 100, max: Infinity },
-         ],
-      };
       
-      pollutionLevel[pollutant].forEach(element => {
-         if (this.between(value, element.min, element.max)) {
+      POLLUTANT[pollutant].level.forEach(element => {
+         if (value >= element.min && value < element.max) {
             level = element.level;
          }
       });
@@ -95,45 +68,39 @@ class Pollutant extends React.Component {
    }
 
    render() {
-      if (this.state.isLoading) {
-         return <div></div>;
-      } else {
-         const pollutants = Object.entries(this.state.pollutants.components);
-         
-         // Remove unnecessary pollutants
-         pollutants.pop()
-         pollutants.reverse();
+      const { isLoading, pollutantData } = this.state;
 
-         return (
-            <div>
-               <h3 className="pollutant-section-title">Các chất gây ô nhiễm</h3>
-               {
-                  pollutants.slice(0, 3).map(([pollutant, value]) => {
-                     return (
-                        <div className="pollutant" key={pollutant}>
-                           <div className="pollutant-detail">
-                              <p className="pollutant-name">{this.makePollutantNameUppercase(pollutant)}</p>
-                              <p>
-                                 <span className={"pollutant-value quality-" + this.hightlightPollutantValue(pollutant, value)}>
-                                    {value}
-                                 </span> 
-                                 <span className="pollutant-unit"> μg/m3</span>
-                              </p>
-                           </div>
-                           <div className="pollutant-detail">
-                              <p className="pollutant-unit">Giới hạn cho phép</p>
-                              <p>
-                                 <span className="pollutant-value">{this.state.concentrationLimit[pollutant]}</span> 
-                                 <span className="pollutant-unit"> μg/m3</span>
-                              </p>
-                           </div>
+      return (
+         !isLoading
+         &&
+         <div>
+            <h3 className="pollutant-section-title">Các chất gây ô nhiễm</h3>
+            {
+               Object.entries(pollutantData.components).reverse().map(([pollutant, value]) => {
+                  return (
+                     <div className="pollutant" key={pollutant}>
+                        <div className="pollutant-detail">
+                           <p className="pollutant-name">{POLLUTANT[pollutant].name}</p>
+                           <p>
+                              <span className={"pollutant-value quality-" + this.classifyPollutionLevel(pollutant, value)}>
+                                 {value}
+                              </span> 
+                              <span className="pollutant-unit">{' ' + POLLUTANT.unit}</span>
+                           </p>
                         </div>
-                     );
-                  })
-               }
-            </div>
-         );
-      }
+                        <div className="pollutant-detail">
+                           <p className="pollutant-unit">Giới hạn cho phép</p>
+                           <p>
+                              <span className="pollutant-value">{POLLUTANT[pollutant].limit}</span> 
+                              <span className="pollutant-unit">{' ' + POLLUTANT.unit}</span>
+                           </p>
+                        </div>
+                     </div>
+                  );
+               })
+            }
+         </div>
+      );
    }
 }
 
