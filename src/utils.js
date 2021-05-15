@@ -27,7 +27,7 @@ export function toVietnamese(description) {
       
       // Clouds weather
       'few clouds': 'Ít mây',
-      'scatterd clouds': 'Mây rải rác',
+      'scattered clouds': 'Mây rải rác',
       'broken clouds': 'Nhiều mây',
       'overcast clouds': 'Nhiều mây',
       
