@@ -115,6 +115,7 @@ body {
 
 .dropdown-option {
    border: none;
+   border-bottom: 2px solid white;
    background-color: white;
    margin-right: 20px;
    padding: 0;
@@ -125,7 +126,7 @@ body {
 
 .dropdown-option:hover {
    cursor: pointer;
-   text-decoration: underline;
+   border-bottom: 2px solid gray;
 }
 /* */
 
@@ -304,7 +305,7 @@ span {
 
 .quality-good { color: limegreen; }
 .quality-fair { color: gold; }
-.quality-moderate { color: orange; }
+.quality-moderate { color: darkorange; }
 .quality-poor { color: crimson; }
 .quality-very-poor { color: purple; }
 
