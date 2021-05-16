@@ -24,7 +24,6 @@ class Pollutant extends React.Component {
          data.list[0].components = this.removeUnnecessaryPollutant(data.list[0].components);
 
          this.setState({
-            location: this.props.location,
             isLoading: false,
             pollutantData: data.list[0],
          });

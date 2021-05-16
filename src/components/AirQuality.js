@@ -19,7 +19,6 @@ class AirQuality extends React.Component {
 
       getCurrentAirQuality(location.coord.lat, location.coord.lon).then((data) => {
          this.setState({
-            location: this.props.location,
             isLoading: false,
             airQualityData: data.list[0],
          });
