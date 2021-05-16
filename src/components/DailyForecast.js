@@ -23,7 +23,6 @@ class DailyForecast extends React.Component {
          val.daily.shift();
 
          this.setState({
-               location: this.props.location,
                isLoading: false,
                weatherData: val.daily,
          });
