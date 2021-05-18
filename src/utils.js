@@ -19,30 +19,3 @@ export function timestampToDate(timestamp) {
     
     return date;
 }
-
-export function toVietnamese(description) {
-   const translation = {
-      // Clear weather
-      'clear sky': 'Quang mây',
-      
-      // Clouds weather
-      'few clouds': 'Ít mây',
-      'scattered clouds': 'Mây rải rác',
-      'broken clouds': 'Nhiều mây',
-      'overcast clouds': 'Nhiều mây',
-      
-      // Rain weather
-      'light rain': 'Mưa nhẹ',
-      'moderate rain': 'Mưa vừa',
-      'heavy intensity rain': 'Mưa to',
-      'very heavy rain': 'Mưa rất to',
-      'extreme rain': 'Mưa rất to',
-      'freezing rain': 'Mưa lạnh',
-      'light intensity shower rain': 'Mưa rào nhẹ',
-      'shower rain': 'Mưa rào',
-      'heavy intensity shower rain': 'Mưa to',
-      'ragged shower rain': 'Mưa rất to',      
-   };
-   
-   return translation[description];
-}
