@@ -2,8 +2,9 @@ import React from 'react';
 
 import { getCurrentWeather } from '../services/provider';
 import { WEATHER_ICON, WEATHER_ICON_FORMAT } from '../services/provider';
-import { LOCATION } from '../services/location';
-import { timestampToTime, toVietnamese } from '../utils';
+import { LOCATION } from '../services/local_data/location';
+import { toVietnamese } from '../services/local_data/weather';
+import { timestampToTime } from '../utils';
 
 class CurrentWeather extends React.Component {
    constructor(props) {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LocationList from './LocationList';
-import { AREAS, TRAVEL_AREAS } from '../services/location';
+import { AREAS, TRAVEL_AREAS } from '../services/local_data/location';
 
 function Navbar(props) {
    return (

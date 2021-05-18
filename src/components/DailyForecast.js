@@ -2,7 +2,7 @@ import React from 'react';
 
 import { getDailyWeather } from '../services/provider';
 import { WEATHER_ICON, WEATHER_ICON_FORMAT } from '../services/provider';
-import { LOCATION } from '../services/location';
+import { LOCATION } from '../services/local_data/location';
 import { timestampToDate } from '../utils';
 
 class DailyForecast extends React.Component {

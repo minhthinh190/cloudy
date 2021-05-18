@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { getCurrentAirQuality } from '../services/provider';
-import { LOCATION } from '../services/location';
-import { POLLUTANT, UNNECESSARY_POLLUTANT } from '../services/air_quality';
+import { LOCATION } from '../services/local_data/location';
+import { POLLUTANT, UNNECESSARY_POLLUTANT } from '../services/local_data/air_quality';
 
 class Pollutant extends React.Component {
    constructor(props) {
