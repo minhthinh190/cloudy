@@ -16,11 +16,11 @@ You can view the live demo of the website [here](https://minhthinh190.github.io/
 
 ## Features
 
-- Real-time local weather
+- Current local weather
 - Hourly local weather forecasts
 - Daily local weather forecasts for 5 days
-- Real-time & Forecast weather of famous travel locations
-- Real-time local air pollution data
+- Current & Forecast weather of famous travel locations
+- Current local air pollution data
 - Detail data of key air pollutants
 
 ## Built With
